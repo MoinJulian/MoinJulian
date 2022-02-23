@@ -1,0 +1,10 @@
+{
+    "name": "MoinJulian",
+    "short_name": "MonJulian",
+    "theme_color": "#252526",
+    "background_color": "#252526",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/"
+  }
