@@ -13,3 +13,21 @@ body {
     font-weight: bold;
     color: rgb(0, 180, 15);
 }
+
+#game {
+    color: white;
+}
+
+#eieruhr {
+    color: white;
+}
+
+h1 {
+    color: red;
+    font-size: 200%;
+}
+
+
+a#YouTube {
+    text-decoration: none;
+}

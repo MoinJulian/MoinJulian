@@ -9,19 +9,9 @@ body {
     color: #eee;
 }
 
-h1 {
-    color: red;
-    font-size: 200%;
-}
 
 
-a#YouTube {
-    text-decoration: none;
-}
 
-a#seite2 {
-    color: #eee;
-}
 
 main {
     height: 100vh;
