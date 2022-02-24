@@ -9,5 +9,6 @@ body {
 }
 
 .neuerteil {
-    font-size: 100%;
+    font-size: 125%;
+    font-weight: bold;
 }
