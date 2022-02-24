@@ -19,6 +19,10 @@ a#YouTube {
     text-decoration: none;
 }
 
+a#seite2 {
+    color: #eee;
+}
+
 main {
     height: 100vh;
     display: flex;
