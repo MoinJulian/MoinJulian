@@ -1,9 +1,9 @@
 {
-    "theme_color" : "#252526"
-    "background_color" : "#252526"
-    "display" : "fullscreen"
-    "scope" : "/"
-    "start_url" : "/index.html"
-    "name" : "MoinJulian"
+    "theme_color" : "#252526",
+    "background_color" : "#252526",
+    "display" : "fullscreen",
+    "scope" : "/",
+    "start_url" : "/index.html",
+    "name" : "MoinJulian",
     "short_name" : "MoinJulian"
     }
