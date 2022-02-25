@@ -1,3 +1,9 @@
+let solving = false;
+
 export function startSolve() {
-    //TODO
+    solving = true;
+    $(".cell").filter(function () {
+        return $(this).val()
+    })
+    .addClass("fixed");
 }
