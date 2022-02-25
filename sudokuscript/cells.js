@@ -6,7 +6,7 @@ export function addBlocks() {
             $("<div></div>")
             .addClass("block")
             .attr("id", `block${row}_${col}`)
-            .appendTo("#soduko");
+            .appendTo("#sudoku");
         }
     }
 }

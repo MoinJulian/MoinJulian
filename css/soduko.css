@@ -99,9 +99,9 @@ button:focus {
     user-select: none;
 }
 
-/* soduko */
+/* sudoku */
 
-#soduko {
+#sudoku {
     margin: 0 auto;
     --spacing: 20px;
     --size: calc(var(--spacing) + 9 * var(--cell-size));
