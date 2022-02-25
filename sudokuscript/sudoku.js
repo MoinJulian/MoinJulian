@@ -7,5 +7,5 @@ $(() => {
     addBlocks();
     addCells();
     focusOnFirstCell();
-    enableControls
+    enableControls();
 });
