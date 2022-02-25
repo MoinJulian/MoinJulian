@@ -1,0 +1,5 @@
+function addBlocks() {
+    //TODO
+}
+
+addBlocks();

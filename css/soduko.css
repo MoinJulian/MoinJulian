@@ -1,0 +1,90 @@
+/*global stuff*/
+:root {
+    --main-color: teal;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 37, 38);
+}
+
+input, button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+}
+
+/* header */
+
+header {
+    padding: 50px 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    color: var(--main-color);
+    line-height: 0.9;
+}
+
+/*Main*/
+
+main {
+    padding: 0px 10px;
+    text-align: center;
+}
+
+/* controls */
+
+#controls {
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    transition: color 150ms linear;
+}
+
+button:disabled {
+    color: #fff6;
+}
+
+button:hover, 
+button:focus {
+    opacity: 0.8;
+}
+
+#solveBtn {
+    width: 75px;
+}
+
+/* Info */
+
+#info {
+    margin: 20px 0px ;
+    color: var(--main-color);
+    user-select: none;
+}
+
+/* soduko */
+
+#soduko {
+    border: 1px solid red;
+}
