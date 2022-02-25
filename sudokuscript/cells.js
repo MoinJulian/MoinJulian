@@ -43,3 +43,6 @@ export function addCells() {
     }
 }
 
+export function focusOnFirstCell() {
+    $(`.cell`)[0].focus();
+}
