@@ -1,7 +1,10 @@
 /*global stuff*/
 :root {
     --main-color: teal;
-
+    --cell-size: min(45px, 8vw);
+    --cell-font-size: calc((0.9) * var(--cell-size));
+    --cell-border-color: #bbb;
+    --block-border-color: #666;
 }
 
 * {
@@ -13,7 +16,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     background-color: rgb(37, 37, 38);
 }
 
@@ -25,6 +28,16 @@ input, button {
     border: none;
     background: inherit;
     color: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 /* header */
@@ -86,5 +99,42 @@ button:focus {
 /* soduko */
 
 #soduko {
-    border: 1px solid red;
+    margin: 0 auto;
+    --spacing: 20px;
+    --size: calc(var(--spacing) + 9 * var(--cell-size));
+    width: var(--size) ;
+    height: var(--size);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--block-border-color);
+    gap: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: var(--cell-font-size);
+    font-weight: bold;
+}
+
+.block {
+    --spacing: 4px;
+    --size: calc(var(--spacing) + 3 * var(--cell-size));
+    width: var(--size) ;
+    height: var(--size);
+    background: var(--cell-border-color);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background: white;
+    text-align: center;
+}
+
+.cell:focus {
+    background: var(--cell-border-color);
 }

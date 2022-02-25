@@ -1,5 +1,6 @@
-function addBlocks() {
-    //TODO
-}
+import { addBlocks, addCells } from "./cells.js";
 
-addBlocks();
+$(() => {
+    addBlocks();
+    addCells();
+})
