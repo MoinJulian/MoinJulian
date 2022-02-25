@@ -6,6 +6,7 @@
     --cell-font-size: calc((0.9) * var(--cell-size));
     --cell-border-color: #bbb;
     --block-border-color: #666;
+    --fixed-color: rgb(245, 205, 205);
 }
 
 * {
@@ -131,6 +132,8 @@ button:focus {
     gap: 1px;
 }
 
+/* cell */
+
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);
@@ -140,4 +143,8 @@ button:focus {
 
 .cell:focus {
     background: var(--cell-border-color);
+}
+
+.cell.fixed {
+    background: var(--fixed-color);
 }
