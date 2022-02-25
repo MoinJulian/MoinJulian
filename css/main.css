@@ -35,3 +35,7 @@ h1 {
 a#YouTube {
     text-decoration: none;
 }
+
+.text {
+    line-height: 0%;
+}
