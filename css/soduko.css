@@ -1,6 +1,7 @@
 /*global stuff*/
 :root {
     --main-color: teal;
+    --main-light-color: rgb(55, 156, 156);
     --cell-size: min(45px, 8vw);
     --cell-font-size: calc((0.9) * var(--cell-size));
     --cell-border-color: #bbb;
@@ -68,7 +69,9 @@ main {
 
 button {
     padding: 6px 12px;
-    background-color: var(--main-color);
+    background: linear-gradient(
+        var(--main-color), 
+        var(--main-light-color));
     color: white;
     cursor: pointer;
     margin: 5px;
