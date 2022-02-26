@@ -1,12 +1,13 @@
-/*global stuff*/
+/* global stuff */
+
 :root {
+    --block-border-color: #666;
+    --cell-border-color: #bbb;
     --main-color: teal;
-    --main-light-color: rgb(55, 156, 156);
+    --main-color-light: rgba(0, 128, 128, 0.8);
+    --fixed-color: rgb(245, 205, 205);
     --cell-size: min(45px, 8vw);
     --cell-font-size: calc((0.9) * var(--cell-size));
-    --cell-border-color: #bbb;
-    --block-border-color: #666;
-    --fixed-color: rgb(245, 205, 205);
 }
 
 * {
@@ -16,13 +17,13 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(37, 37, 38);
+    color: #222;
 }
 
-input, button {
+input,
+button {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -55,7 +56,7 @@ h1 {
     line-height: 0.9;
 }
 
-/*Main*/
+/* main */
 
 main {
     padding: 0px 10px;
@@ -71,8 +72,9 @@ main {
 button {
     padding: 6px 12px;
     background: linear-gradient(
-        var(--main-color), 
-        var(--main-light-color));
+        var(--main-color),
+        var(--main-color-light)
+    );
     color: white;
     cursor: pointer;
     margin: 5px;
@@ -83,7 +85,7 @@ button:disabled {
     color: #fff6;
 }
 
-button:hover, 
+button:hover,
 button:focus {
     opacity: 0.8;
 }
@@ -92,10 +94,10 @@ button:focus {
     width: 75px;
 }
 
-/* Info */
+/* info */
 
 #info {
-    margin: 20px 0px ;
+    margin: 20px 0px;
     color: var(--main-color);
     user-select: none;
 }
@@ -103,49 +105,56 @@ button:focus {
 /* sudoku */
 
 #sudoku {
-    margin: 0 auto;
     --spacing: 20px;
     --size: calc(var(--spacing) + 9 * var(--cell-size));
-    width: var(--size) ;
+    margin: 0px auto;
+    width: var(--size);
     height: var(--size);
+    background: var(--block-border-color);
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    flex-wrap: wrap;
-    background: var(--block-border-color);
     gap: 2px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode",
+        "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     font-size: var(--cell-font-size);
     font-weight: bold;
     transition: opacity 500ms linear;
 }
 
+/* solving sudoku */
+
 #sudoku.solving {
     opacity: 0.6;
 }
 
-/*block*/
+/* blocks */
 
 .block {
     --spacing: 4px;
     --size: calc(var(--spacing) + 3 * var(--cell-size));
-    width: var(--size) ;
+    width: var(--size);
     height: var(--size);
     background: var(--cell-border-color);
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 1px;
 }
 
-/* cell */
+/* cells */
 
 .cell {
+    background: white;
     width: var(--cell-size);
     height: var(--cell-size);
-    background: white;
     text-align: center;
+}
+
+.cell:disabled {
+    user-select: none;
 }
 
 .cell:focus {
