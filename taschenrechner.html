@@ -18,9 +18,9 @@
 
     <table>
         <tr>
-            <td onclick="appendOperation('(')">(</td>
-            <td onclick="appendOperation(')')" >)</td>
-            <td onclick="deleteAll()">DEL ALL (a)</td>
+            <td onclick="appendOperation('(')" class="highlight">(</td>
+            <td onclick="appendOperation(')')" class="highlight">)</td>
+            <td onclick="deleteAll()" class="highlight">DEL ALL (a)</td>
             <td onclick="deleteLast()" class="highlight">DEL (d)</td>
         </tr>
 
@@ -47,7 +47,7 @@
 
         <tr>
             <td onclick="appendOperation(0)">0</td>
-            <td onclick="appendOperation('.')">.</td>
+            <td onclick="appendOperation('.')" class="highlight">.</td>
             <td onclick="calculatResult()" id="result">= (space)</td>
             <td onclick="appendOperation(' - ')" class="highlight">-</td>
         </tr>
