@@ -16,7 +16,7 @@
     padding: 0;
 }
 
-a {
+#link {
     display: flex;
     justify-content: center;
     color: white;
