@@ -3,7 +3,7 @@ import { startSolve } from "./solver.js";
 
 export function enableControls() {
     $("#clearBtn").on("click", clearSudoku);
-    $("#soveBtn").on("click", startSolve);
+    $("#solveBtn").on("click", startSolve);
 }
 
 function clearSudoku() {

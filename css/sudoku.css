@@ -117,7 +117,14 @@ button:focus {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: var(--cell-font-size);
     font-weight: bold;
+    transition: opacity 500ms linear;
 }
+
+#sudoku.solving {
+    opacity: 0.6;
+}
+
+/*block*/
 
 .block {
     --spacing: 4px;
