@@ -37,5 +37,38 @@ addEventListener("keydown", (e) => {
         case "4":
             appendOperation(4);
             break;
+        case "5":
+            appendOperation(5);
+            break;
+        case "6":
+            appendOperation(6);
+            break;
+        case "7":
+            appendOperation(7);
+            break;
+        case "8":
+            appendOperation(8);
+            break;
+        case "9":
+            appendOperation(9);
+            break;
+        case "0":
+            appendOperation(0);
+            break;
+        case "/":
+            appendOperation("/");
+            break;
+        case "*":
+            appendOperation("*");
+            break;
+        case " ":
+            calculatResult();
+            break;
+        case "d":
+            deleteLast();
+            break;
+        case "a":
+            deleteAll();
+            break;
     }
 });
