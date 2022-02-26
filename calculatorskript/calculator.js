@@ -61,6 +61,21 @@ addEventListener("keydown", (e) => {
         case "*":
             appendOperation("*");
             break;
+        case "+":
+            appendOperation("+");
+            break;
+        case "-":
+            appendOperation("-");
+            break;
+        case ".":
+            appendOperation(".");
+            break;
+        case "(":
+            appendOperation("(");
+            break;
+        case ")":
+            appendOperation(")");
+            break;
         case " ":
             calculatResult();
             break;
