@@ -23,6 +23,14 @@
                 container.innerHTML = container.innerHTML.slice(0, -1);
             }
         }
+        function deleteAll() {
+            let container = document.getElementById('resultArea');
+            if(container.innerHTML.endsWith(" ")) {
+                container.innerHTML = container.innerHTML.slice(0, -Infinity);
+            } else {
+                container.innerHTML = container.innerHTML.slice(0, -Infinity);
+            }
+        }
     </script>
 </head>
 <body>
@@ -36,9 +44,9 @@
 
     <table>
         <tr>
-            <td></td>
             <td onclick="appendOperation('(')">(</td>
             <td onclick="appendOperation(')')" >)</td>
+            <td onclick="deleteAll()">DEL ALL</td>
             <td onclick="deleteLast()" class="highlight">DEL</td>
         </tr>
 
