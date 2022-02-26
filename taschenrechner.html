@@ -4,6 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/calculator.css">
+    <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+    <title>Taschenrechner</title>
     <script>
         function appendOperation(operation) {
             document.getElementById('resultArea').innerHTML += operation;
@@ -35,8 +37,8 @@
     <table>
         <tr>
             <td></td>
-            <td></td>
-            <td></td>
+            <td onclick="appendOperation('(')">(</td>
+            <td onclick="appendOperation(')')" >)</td>
             <td onclick="deleteLast()" class="highlight">DEL</td>
         </tr>
 
