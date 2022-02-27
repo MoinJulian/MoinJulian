@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+a {
+    color: white;
+}
+
 :root {
-    --size: min(100px, 50vw);
+    --size: min(300px, 50vw);
     --size-half: calc(0.5 * var(--size));
     --size-half-negative: calc(-0.5 * var(--size));
     --border-radius: calc(0.1 * var(--size));
@@ -21,8 +25,8 @@ body {
 }
 
 #stage {
-    min-width: 50vw;
-    min-height: 50vh;
+    min-width: 100vw;
+    min-height: 100vh;
     perspective: var(--perspective);
     display: flex;
     align-items: center;
