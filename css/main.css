@@ -15,19 +15,23 @@ body {
 }
 
 #game {
-    color: black;
+    color: white;
 }
 
 #eieruhr {
-    color: black;
+    color: white;
 }
 
 #sudoku {
-    color: black;
+    color: white;
 }
 
 #rechner {
-    color: black;
+    color: white;
+}
+
+#cube {
+    color: white;
 }
 
 h1 {
