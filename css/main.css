@@ -14,25 +14,11 @@ body {
     color: rgb(0, 180, 15);
 }
 
-#game {
+.link {
     color: white;
 }
 
-#eieruhr {
-    color: white;
-}
 
-#sudoku {
-    color: white;
-}
-
-#rechner {
-    color: white;
-}
-
-#cube {
-    color: white;
-}
 
 h1 {
     color: red;
