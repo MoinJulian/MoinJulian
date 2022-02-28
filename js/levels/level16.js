@@ -4,7 +4,7 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level6 = new Level({
+export const level16 = new Level({
     size: [800, 600],
     objects: [
         new Goal({ pos: [400, 50], size: [50, 50], color: "black" }),

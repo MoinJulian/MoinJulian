@@ -10,6 +10,16 @@ import { level8 } from "./levels/level8.js";
 import { level9 } from "./levels/level9.js";
 import { level10 } from "./levels/level10.js";
 import { level11 } from "./levels/level11.js";
+import { level12 } from "./levels/level12.js";
+import { level13 } from "./levels/level13.js";
+import { level14 } from "./levels/level14.js";
+import { level15 } from "./levels/level15.js";
+import { level16 } from "./levels/level16.js";
+import { level17 } from "./levels/level17.js";
+import { level18 } from "./levels/level18.js";
+import { level19 } from "./levels/level19.js";
+import { level20 } from "./levels/level20.js";
+import { levelf } from "./levels/levelf.js";
 
 const levelCount = document.getElementById("levelCount");
 
@@ -52,4 +62,6 @@ export class Game {
     }
 }
 
-export const game = new Game([level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11]);
+export const game = new Game([level1, level2, level3, level4, level5, level6, level7, 
+        level8, level9, level10, level11, level12, level13, level14, level15, level16, 
+         level17, level18, level19,level20, levelf]);
