@@ -28,9 +28,22 @@
         }
         
         .timer {
-            font-size: 60px;
+            font-size: 20px;
             color: white;
             font-family: 'Roboto', sans-serif;
+        }
+
+        .start {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10vw;
+            height: 5vh;
+            background-color: #131313;
+        }
+
+        .start:hover {
+            cursor: pointer;
         }
 
     </style>
@@ -38,7 +51,7 @@
     <script>
         let alarm = new Audio('Eieruhr_alarm.mp3');
         let timerStarted = false;
-        let timerlenght = 5;
+        let timerlenght = 5 + 0.02;
 
         function startTimer() {
             if (!timerStarted) {
@@ -75,11 +88,13 @@
     <a href="index.html">Hauptseite</a>
 
 
-    <div class="center margin-top timer" id="timer">05:00</div>
+    <div class="center margin-top timer" id="timer">Deine Zeit läuft sobald du auf Start drückst!</div>
 
 
     <div class="center margin-top timer">
-        <img onclick="startTimer()" src="img./button.png">
+        <table>
+            <td onclick="startTimer()" class="start">Start</td>
+        </table>
     </div>
 
 </body>
