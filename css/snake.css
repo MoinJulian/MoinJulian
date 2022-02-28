@@ -3,6 +3,10 @@ main {
     justify-content: center;
 }
 
+#link {
+    color: white;
+}
+
 body {
     background-color: #252526;
 }
