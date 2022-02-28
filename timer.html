@@ -37,12 +37,22 @@
         }
 
         .start {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             width: 10vw;
             height: 5vh;
             background-color: darkred;
+        }
+
+        #stop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #start {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .start:hover {
@@ -55,6 +65,12 @@
         let alarm = new Audio('./alarm/Eieruhr_alarm.mp3');
         let timerStarted = false;
         let timerlenght = 5 + 0.02;
+
+        function stopTimer() {
+            if (timerStarted) {
+                let stopTimer = location.reload();
+            }
+        }
 
         function startTimer() {
             if (!timerStarted) {
@@ -96,7 +112,8 @@
 
     <div class="center margin-top timer">
         <table>
-            <td onclick="startTimer()" class="start">Start</td>
+            <td onclick="startTimer()" class="start" id="start">Start</td>
+            <td onclick="stopTimer()" class="start" id="stop">Stop</td>
         </table>
     </div>
 
