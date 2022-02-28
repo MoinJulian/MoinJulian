@@ -19,7 +19,10 @@ body {
     color: white;
 }
 
-
+.fett {
+    font-size: 20px;
+    font-style: oblique;
+}
 
 h1 {
     color: red;
