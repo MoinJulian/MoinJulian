@@ -89,7 +89,7 @@
                         let seconds = (timeLeft / 1000) % 60;
                         seconds = Math.round(seconds);
                         seconds = ('0' + seconds).slice(-2);
-                        let text = '0'  +  minutes  +  ' : '  +  seconds;
+                        let text = minutes  +  ' : '  +  seconds;
                         timer.innerHTML = text;
                     } else {
                         alarm.play();

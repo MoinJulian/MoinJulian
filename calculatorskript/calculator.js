@@ -14,7 +14,7 @@ function deleteLast() {
         container.innerHTML = container.innerHTML.slice(0, -1);
     }
 }
-//Julian Hammer
+//MoinJulian
 function deleteAll() {
     let container = document.getElementById('resultArea');
     if(container.innerHTML.endsWith(" ")) {
