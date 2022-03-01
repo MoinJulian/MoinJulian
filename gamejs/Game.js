@@ -19,7 +19,7 @@ import { level17 } from "./levels/level17.js";
 import { level18 } from "./levels/level18.js";
 import { level19 } from "./levels/level19.js";
 import { level20 } from "./levels/level20.js";
-import { levelf } from "./levels/levelf.js";
+import { level21 } from "./levels/level21.js";
 
 const levelCount = document.getElementById("levelCount");
 
@@ -64,4 +64,4 @@ export class Game {
 
 export const game = new Game([level1, level2, level3, level4, level5, level6, level7, 
         level8, level9, level10, level11, level12, level13, level14, level15, level16, 
-         level17, level18, level19,level20, levelf]);
+         level17, level18, level19,level20, level21]);
