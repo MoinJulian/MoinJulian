@@ -18,13 +18,13 @@ table {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    td {
+td {
     width:25%;
     text-align: center;
     font-size: 20px;
     }
 
-    td:hover {
+td:hover {
     background-color: rgb(30, 30, 30);
     cursor: pointer;
     }
