@@ -37,22 +37,12 @@
         }
 
         .start {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 10vw;
             height: 5vh;
             background-color: darkred;
-        }
-
-        #stop {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-
-        #start {
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .start:hover {
@@ -111,8 +101,15 @@
 
     <div class="center margin-top timer">
         <table>
-            <td onclick="startTimer()" class="start" id="start">Start</td>
-            <td onclick="stopTimer()" class="start" id="stop">Stop</td>
+            <tr>
+                <td onclick="startTimer()" class="start" id="start">Start</td>
+                <td><table>
+                   <td></td>
+                   <td></td>
+                   <td></td> 
+                </table></td>
+                <td onclick="stopTimer()" class="start" id="stop">Stop</td>
+            </tr>       
         </table>
     </div>
 
