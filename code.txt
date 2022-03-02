@@ -1,0 +1,2425 @@
+function appendOperation(operation) {
+    document.getElementById('resultArea').innerHTML += operation;
+}
+function calculatResult() {
+    let container = document.getElementById('resultArea');
+    let result = eval(container.innerHTML);
+    container.innerHTML = result;
+}
+function deleteLast() {
+    let container = document.getElementById('resultArea');
+    if(container.innerHTML.endsWith(" ")) {
+        container.innerHTML = container.innerHTML.slice(0, -3);
+    } else {
+        container.innerHTML = container.innerHTML.slice(0, -1);
+    }
+}
+//MoinJulian
+function deleteAll() {
+    let container = document.getElementById('resultArea');
+    if(container.innerHTML.endsWith(" ")) {
+        container.innerHTML = container.innerHTML.slice(0, -Infinity);
+    } else {
+        container.innerHTML = container.innerHTML.slice(0, -Infinity);
+    }
+}
+addEventListener("keydown", (e) => {
+    switch (e.key) {
+        case "1":
+            appendOperation(1);
+            break;
+        case "2":
+            appendOperation(2);
+            break;
+        case "3":
+            appendOperation(3);
+            break;
+        case "4":
+            appendOperation(4);
+            break;
+        case "5":
+            appendOperation(5);
+            break;
+        case "6":
+            appendOperation(6);
+            break;
+        case "7":
+            appendOperation(7);
+            break;
+        case "8":
+            appendOperation(8);
+            break;
+        case "9":
+            appendOperation(9);
+            break;
+        case "0":
+            appendOperation(0);
+            break;
+        case "/":
+            appendOperation("/");
+            break;
+        case "*":
+            appendOperation("*");
+            break;
+        case "+":
+            appendOperation("+");
+            break;
+        case "-":
+            appendOperation("-");
+            break;
+        case ".":
+            appendOperation(".");
+            break;
+        case "(":
+            appendOperation("(");
+            break;
+        case ")":
+            appendOperation(")");
+            break;
+        case " ":
+            calculatResult();
+            break;
+        case "d":
+            deleteLast();
+            break;
+        case "a":
+            deleteAll();
+            break;
+    }
+});
+body {
+    background-color:rgb(37, 37, 38) ;
+}
+
+#taschenrechner {
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+table {
+    width: 100%;
+    height: 55vh;
+    background-color: rgb(37, 37, 38);
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+td {
+    width:25%;
+    text-align: center;
+    font-size: 20px;
+    }
+
+td:hover {
+    background-color: rgb(30, 30, 30);
+    cursor: pointer;
+    }
+
+    #resultArea {
+        height: 30vh;
+        background-color: rgb(45, 45, 45);
+        color: white;
+        font-size: 64px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #result {
+        background-color: rgb(50, 37, 236);
+    }
+
+    #result:hover {
+        background-color: rgb(16, 0, 240) ;
+    }
+
+    .highlight {
+        background-color: rgb(25, 25, 25);
+    }
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: white;
+}
+
+:root {
+    --size: min(300px, 50vw);
+    --size-half: calc(0.5 * var(--size));
+    --size-half-negative: calc(-0.5 * var(--size));
+    --border-radius: calc(0.1 * var(--size));
+    --shadow-radius: calc(0.1 * var(--size));
+    --perspective: calc(2.5 * var(--size));
+    --font-size: calc(0.9 * var(--size));
+    --rotation-speed: 50s;
+}
+
+body {
+    background-color: #252526;
+    color: white;
+}
+
+#stage {
+    min-width: 100vw;
+    min-height: 100vh;
+    perspective: var(--perspective);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+#cube {
+    transform-style: inherit;
+    position: relative;
+    animation: cube-rotation var(--rotation-speed) linear infinite;
+}
+
+@keyframes cube-rotation {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateX(1080deg) rotateY(720deg) rotateZ(360deg);
+    }
+}
+
+.face {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    background: gray;
+    color: gray;
+    font-size: var(--font-size);
+    transition: all 200ms ease;
+}
+
+.faceContent {
+    width: 90%;
+    height: 90%;
+    background: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+}
+
+.face:hover {
+    background: white;
+    box-shadow: 0px 0px var(--shadow-radius) white;
+    opacity: 1;
+    color: black;
+}
+
+.face.front {
+    transform: translateX(-50%) translateY(-50%)
+    translateZ(var(--size-half));
+}
+
+.face.back {
+    transform: translateX(-50%) translateY(-50%)
+    translateZ(var(--size-half-negative)) scaleX(-1);
+}
+
+
+.face.left {
+    transform:translateX(calc(-50% + var(--size-half-negative)))
+    translateY(-50%) rotateY(-90deg);
+}
+
+.face.right {
+    transform:translateX(calc(-50% + var(--size-half)))
+    translateY(-50%) rotateY(90deg);
+}
+
+.face.top {
+    transform: translateX(-50%) translateY(calc(-50% + var(--size-half-negative)))
+    rotateX(90deg);
+}
+
+.face.bottom {
+    transform: translateX(-50%) translateY(calc(-50% + var(--size-half)))
+    rotateX(-90deg);
+}
+.background {
+    background-color: #252526;
+}
+
+body {
+    background-color: rgb(37, 37, 38);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+}
+
+/* .neuerteil {
+    font-size: 125%;
+    font-weight: bold;
+    color: rgb(0, 180, 15);
+} */
+
+.link {
+    line-height: 25px;
+    color: white;
+}
+
+.fett {
+    font-size: 20px;
+    font-style: oblique;
+}
+
+h1 {
+    color: red;
+    font-size: 200%;
+}
+
+
+a#YouTube {
+    text-decoration: none;
+}
+
+.kanal {
+    color: white;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#link {
+    color: white;
+}
+
+body {
+    background-color: #252526;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(37, 37, 38);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+}
+
+#link {
+    color: white;
+}
+
+
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#info {
+    display: none;
+    text-align: center;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: rgb(0, 0, 250, 0.7);
+    padding: 20px 50px;
+}
+
+#levelCount {
+    margin-top: 10px;
+    opacity: 0.6;
+    width: 800px;
+    text-align: right;
+    font-size: 18px;
+}
+
+canvas {
+    background-color: #eee;
+}
+/* global stuff */
+
+:root {
+    --block-border-color: #666;
+    --cell-border-color: #bbb;
+    --main-color: teal;
+    --main-color-light: rgba(0, 128, 128, 0.8);
+    --fixed-color: rgb(245, 205, 205);
+    --cell-size: min(45px, 8vw);
+    --cell-font-size: calc((0.9) * var(--cell-size));
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#link {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #222;
+    background-color: rgb(37, 37, 38);
+}
+
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* header */
+
+header {
+    padding: 50px 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    color: var(--main-color);
+    line-height: 0.9;
+}
+
+/* main */
+
+main {
+    padding: 0px 10px;
+    text-align: center;
+}
+
+/* controls */
+
+#controls {
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 6px 12px;
+    background: linear-gradient(
+        var(--main-color),
+        var(--main-color-light)
+    );
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    transition: color 150ms linear;
+}
+
+button:disabled {
+    color: #fff6;
+}
+
+button:hover,
+button:focus {
+    opacity: 0.8;
+}
+
+#solveBtn {
+    width: 75px;
+}
+
+/* info */
+
+#info {
+    margin: 20px 0px;
+    color: var(--main-color);
+    user-select: none;
+}
+
+/* sudoku */
+
+#sudoku {
+    --spacing: 20px;
+    --size: calc(var(--spacing) + 9 * var(--cell-size));
+    margin: 0px auto;
+    width: var(--size);
+    height: var(--size);
+    background: var(--block-border-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 2px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode",
+        "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: var(--cell-font-size);
+    font-weight: bold;
+    transition: opacity 500ms linear;
+}
+
+/* solving sudoku */
+
+#sudoku.solving {
+    opacity: 0.6;
+}
+
+/* blocks */
+
+.block {
+    --spacing: 4px;
+    --size: calc(var(--spacing) + 3 * var(--cell-size));
+    width: var(--size);
+    height: var(--size);
+    background: var(--cell-border-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 1px;
+}
+
+/* cells */
+
+.cell {
+    background: white;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    text-align: center;
+}
+
+.cell:disabled {
+    user-select: none;
+}
+
+.cell:focus {
+    background: var(--cell-border-color);
+}
+
+.cell.fixed {
+    background: var(--fixed-color);
+}
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level1 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [125, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [600, 250], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [50, 100], size: [200, 10], color: "blue" }),
+        new Box({ pos: [180, 500], size: [60, 100], color: "orange" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level2 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [10, 30], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({ pos: [600, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [140, 10], color: "blue" }),
+        new Box({ pos: [450, 350], size: [50, 50], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level3 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [650, 250], size: [50, 50], color: "black" }),
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 180], size: [10, 420], color: "blue" }),
+        new Rectangle({ pos: [520, 0], size: [10, 480], color: "blue" }),
+        new Rectangle({ pos: [350, 240], size: [10, 180], color: "blue" }),
+        new Rectangle({ pos: [0, 320], size: [350, 10], color: "blue" }),
+        new Rectangle({ pos: [0, 500], size: [360, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [110, 10], color: "blue" }),
+        new Rectangle({ pos: [100, 410], size: [250, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [10, 80], color: "blue" }),
+        new Rectangle({ pos: [630, 300], size: [135, 10], color: "blue" }),
+        new Box({ pos: [200, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [60, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [200, 370], size: [40, 40], color: "teal" }),
+        new Box({ pos: [310, 110], size: [60, 60], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level4 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level5 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Goal({ pos: [650, 200], size: [50, 50], color: "black" }),
+        new Rectangle({ pos: [630, 250], size: [90, 10], color:"blue"}), //Rechteck unter dem Goal
+        new Rectangle({ pos: [550, 50], size: [10, 500], color:"gray"}),
+        new Box({pos: [550, 550], size: [10, 60], color: "gray"}),
+        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"})
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level6 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [400, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 50], size: [10, 50], color: "black"}),
+        new Rectangle({ pos: [100, 400], size: [60, 10], color:"blue"}),
+        new Rectangle({ pos: [0, 200], size: [60, 10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level7 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level8 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [10, 30], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({ pos: [600, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [140, 10], color: "blue" }),
+        new Box({ pos: [450, 350], size: [50, 50], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level9 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [650, 250], size: [50, 50], color: "black" }),
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 180], size: [10, 420], color: "blue" }),
+        new Rectangle({ pos: [520, 0], size: [10, 480], color: "blue" }),
+        new Rectangle({ pos: [350, 240], size: [10, 180], color: "blue" }),
+        new Rectangle({ pos: [0, 320], size: [350, 10], color: "blue" }),
+        new Rectangle({ pos: [0, 500], size: [360, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [110, 10], color: "blue" }),
+        new Rectangle({ pos: [100, 410], size: [250, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [10, 80], color: "blue" }),
+        new Rectangle({ pos: [630, 300], size: [135, 10], color: "blue" }),
+        new Box({ pos: [200, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [60, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [200, 370], size: [40, 40], color: "teal" }),
+        new Box({ pos: [310, 110], size: [60, 60], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level10 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, -100], size: [10, 1250], color:"blue"}),
+        new Box({ pos: [600, 1150], size: [10, 50], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level11 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Rectangle({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Rectangle({pos: [400, 1100], size: [10, 50], color:"blue"}),
+        new Goal({ pos: [400, 1150], size: [10, 50], color: "blue" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level12 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level13 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [125, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [600, 250], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [50, 100], size: [200, 10], color: "blue" }),
+        new Box({ pos: [180, 500], size: [60, 100], color: "orange" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level14 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level15 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Goal({ pos: [650, 200], size: [50, 50], color: "black" }),
+        new Rectangle({ pos: [630, 250], size: [90, 10], color:"blue"}), //Rechteck unter dem Goal
+        new Rectangle({ pos: [550, 50], size: [10, 500], color:"gray"}),
+        new Box({pos: [550, 550], size: [10, 60], color: "gray"}),
+        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"})
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level16 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [400, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 50], size: [10, 50], color: "black"}),
+        new Rectangle({ pos: [100, 400], size: [60, 10], color:"blue"}),
+        new Rectangle({ pos: [0, 200], size: [60, 10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level17 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level18 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [10, 30], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({ pos: [600, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [140, 10], color: "blue" }),
+        new Box({ pos: [450, 350], size: [50, 50], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level19 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [650, 250], size: [50, 50], color: "black" }),
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 180], size: [10, 420], color: "blue" }),
+        new Rectangle({ pos: [520, 0], size: [10, 480], color: "blue" }),
+        new Rectangle({ pos: [350, 240], size: [10, 180], color: "blue" }),
+        new Rectangle({ pos: [0, 320], size: [350, 10], color: "blue" }),
+        new Rectangle({ pos: [0, 500], size: [360, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [110, 10], color: "blue" }),
+        new Rectangle({ pos: [100, 410], size: [250, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [10, 80], color: "blue" }),
+        new Rectangle({ pos: [630, 300], size: [135, 10], color: "blue" }),
+        new Box({ pos: [200, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [60, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [200, 370], size: [40, 40], color: "teal" }),
+        new Box({ pos: [310, 110], size: [60, 60], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level20 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level21 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [400, 1160], size: [40, 40], color: "white" }),
+        new Player({ pos: [400, 1160], size: [40, 40] }),
+        
+    ],
+});
+import { Rectangle } from "./Rectangle.js";
+
+export class Box extends Rectangle {
+    constructor(options, type) {
+        const { pos, size, color, grav, friction, vel } = options;
+        super({ pos, size, color }, type || "Box");
+        this.grav = grav || 0.005;
+        this.friction = friction || 0;
+        this.vel = vel ? vel : [0, 0];
+        this.originalVel = [...this.vel];
+        this.acc = 0;
+        this.onGround = false;
+        this.ppos = [...pos];
+    }
+
+    reset() {
+        this.pos = [...this.originalPos];
+        this.vel = [...this.originalVel];
+        this.acc = 0;
+    }
+
+    get prevLeft() {
+        return this.ppos[0];
+    }
+
+    get prevRight() {
+        return this.ppos[0] + this.size[0];
+    }
+
+    get prevTop() {
+        return this.ppos[1];
+    }
+
+    get prevBottom() {
+        return this.ppos[1] + this.size[1];
+    }
+
+    applyPhysics(deltaTime) {
+        this.vel[0] += this.acc * deltaTime;
+        this.vel[0] *= 1 - this.friction;
+        this.vel[1] += this.grav * deltaTime;
+        this.pos[1] += this.vel[1] * deltaTime;
+        this.pos[0] += this.vel[0] * deltaTime;
+        this.onGround = false;
+    }
+
+    update(deltaTime) {
+        this.ppos = [...this.pos];
+        this.applyPhysics(deltaTime);
+        this.level.objects.forEach((obj) => {
+            if (obj.type === "Goal") return;
+            this.collideWith(obj).fromAbove();
+            this.collideWith(obj).fromBelow();
+            this.collideWith(obj).fromLeft();
+            this.collideWith(obj).fromRight();
+        });
+        this.boundToLevel();
+        this.checkGoal();
+    }
+
+    checkGoal() {
+        return;
+    }
+
+    boundToLevel() {
+        if (this.bottom >= this.level.size[1]) {
+            this.vel[1] = 0;
+            this.setBottom(this.level.size[1]);
+            this.onGround = true;
+        }
+        if (this.left <= 0) {
+            this.setLeft(0);
+            this.vel[0] = 0;
+        } else if (this.right >= this.level.size[0]) {
+            this.setRight(this.level.size[0]);
+            this.vel[0] = 0;
+        }
+    }
+
+    push() {
+        return {
+            toLeft: () => false,
+            toRight: () => false,
+        };
+    }
+
+    collideWith(obj) {
+        return {
+            fromLeft: () => {
+                if (this.prevRight <= obj.left && this.overlapsWith(obj)) {
+                    if (this.push(obj).toRight()) return;
+                    this.setRight(obj.left);
+                    this.vel[0] = 0;
+                }
+            },
+            fromRight: () => {
+                if (this.prevLeft >= obj.right && this.overlapsWith(obj)) {
+                    if (this.push(obj).toLeft()) return;
+                    this.setLeft(obj.right);
+                    this.vel[0] = 0;
+                }
+            },
+            fromAbove: () => {
+                if (this.prevBottom <= obj.top && this.overlapsWith(obj)) {
+                    this.setBottom(obj.top);
+                    this.vel[1] = 0;
+                    this.onGround = true;
+                }
+            },
+            fromBelow: () => {
+                if (this.prevTop >= obj.bottom && this.overlapsWith(obj)) {
+                    this.setTop(obj.bottom);
+                    this.vel[1] = 0;
+                }
+            },
+        };
+    }
+
+    canBeMovedBy(vector) {
+        if (
+            this.left + vector[0] < 0 ||
+            this.right + vector[0] > this.level.size[0] ||
+            this.top + vector[1] < 0 ||
+            this.bottom + vector[1] > this.level.size[1]
+        )
+            return false;
+        return [
+            ...this.level.objectsOfType.Box,
+            ...this.level.objectsOfType.Rectangle,
+        ].every((obj) => !this.overlapsWith(obj, vector));
+    }
+
+    getDistanceToRightObject() {
+        let d = this.level.size[0] - this.right;
+        [...this.level.objectsOfType.Box, ...this.level.objectsOfType.Rectangle].forEach(
+            (obj) => {
+                if (
+                    this.right <= obj.left &&
+                    this.bottom > obj.top &&
+                    this.top < obj.bottom
+                )
+                    d = Math.min(d, obj.left - this.right);
+            }
+        );
+        return d;
+    }
+
+    getDistanceToLeftObject() {
+        let d = this.left;
+        [...this.level.objectsOfType.Box, ...this.level.objectsOfType.Rectangle].forEach(
+            (obj) => {
+                if (
+                    this.left >= obj.right &&
+                    this.bottom > obj.top &&
+                    this.top < obj.bottom
+                )
+                    d = Math.min(d, this.left - obj.right);
+            }
+        );
+        return d;
+    }
+}
+import { Rectangle } from "./Rectangle.js";
+
+export class Goal extends Rectangle {
+    constructor(options, type) {
+        super(options, type || "Goal");
+    }
+}
+import { Box } from "./Box.js";
+
+export class Player extends Box {
+    constructor(options, type) {
+        super(
+            {
+                pos: options.pos,
+                size: options.size,
+                color: "red",
+                grav: 0.004,
+                friction: 0.2,
+            },
+            type || "Player"
+        );
+        this.walkSpeed = 0.012;
+        this.jumpSpeed = 1.45;
+        this.addControls();
+    }
+
+    addControls() {
+        document.addEventListener("keydown", (e) => {
+            switch (e.key) {
+                case "ArrowRight":
+                    this.acc = this.walkSpeed;
+                    break;
+                case "ArrowLeft":
+                    this.acc = -this.walkSpeed;
+                    break;
+                case "ArrowUp":
+                    if (this.onGround) {
+                        this.onGround = false;
+                        this.vel[1] = -this.jumpSpeed;
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener("keyup", (e) => {
+            switch (e.key) {
+                case "ArrowRight":
+                    this.acc = 0;
+                    break;
+                case "ArrowLeft":
+                    this.acc = 0;
+                    break;
+                case "d":
+                        this.acc = 0;
+                        break;
+                case "a":
+                        this.acc = 0;
+                        break;
+            }
+        });
+    }
+
+    push(obj) {
+        return {
+            toRight: () => {
+                if (obj.type !== "Box") return false;
+                const distance = this.right - obj.left;
+                if (obj.canBeMovedBy([distance, 0])) {
+                    obj.setLeft(obj.left + distance);
+                    return true;
+                }
+                const smallDistance = obj.getDistanceToRightObject();
+                if (obj.canBeMovedBy([smallDistance, 0])) {
+                    obj.setLeft(obj.left + smallDistance);
+                    this.setRight(obj.left);
+                    return true;
+                }
+                return false;
+            },
+            toLeft: () => {
+                if (obj.type !== "Box") return false;
+                const distance = obj.right - this.left;
+                if (obj.canBeMovedBy([-distance, 0])) {
+                    obj.setRight(this.left);
+                    return true;
+                }
+                const smallDistance = obj.getDistanceToLeftObject();
+                if (obj.canBeMovedBy([-smallDistance, 0])) {
+                    obj.setLeft(obj.left - smallDistance);
+                    this.setLeft(obj.right);
+                    return true;
+                }
+                return false;
+            },
+        };
+    }
+
+    checkGoal() {
+        const hasReachedGoal = this.level.objectsOfType.Goal.some((goal) =>
+            this.overlapsWith(goal)
+        );
+        if (hasReachedGoal) this.level.won = true;
+    }
+}
+import { ctx } from "../canvas.js";
+
+export class Rectangle {
+    constructor(options, type) {
+        this.pos = options.pos;
+        this.size = options.size;
+        this.color = options.color;
+        this.type = type || "Rectangle";
+        this.level = null;
+        this.originalPos = [...this.pos];
+    }
+
+    get left() {
+        return this.pos[0];
+    }
+
+    get right() {
+        return this.pos[0] + this.size[0];
+    }
+
+    get top() {
+        return this.pos[1];
+    }
+
+    get bottom() {
+        return this.pos[1] + this.size[1];
+    }
+
+    setLeft(val) {
+        this.pos[0] = val;
+    }
+
+    setRight(val) {
+        this.pos[0] = val - this.size[0];
+    }
+
+    setTop(val) {
+        this.pos[1] = val;
+    }
+
+    setBottom(val) {
+        this.pos[1] = val - this.size[1];
+    }
+
+    draw() {
+        ctx.fillStyle = this.color;
+        ctx.fillRect(
+            this.pos[0] - this.level.cameraPos[0],
+            this.pos[1] - this.level.cameraPos[1],
+            this.size[0],
+            this.size[1]
+        );
+    }
+
+    update() {}
+
+    overlapsWith(obj, vector = [0, 0]) {
+        if (this === obj) return false;
+        return (
+            this.left + vector[0] < obj.right &&
+            this.right + vector[0] > obj.left &&
+            this.bottom + vector[1] > obj.top &&
+            this.top + vector[1] < obj.bottom
+        );
+    }
+
+    reset() {
+        this.pos = [...this.originalPos];
+    }
+}
+export const canvas = document.getElementById("canvas");
+export const ctx = canvas.getContext("2d");
+
+export function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+import { level1 } from "./levels/level1.js";
+import { level2 } from "./levels/level2.js";
+import { level3 } from "./levels/level3.js";
+import { level4 } from "./levels/level4.js";
+import { writeInfo } from "./info.js";
+import { level5 } from "./levels/level5.js";
+import { level6 } from "./levels/level6.js";
+import { level7 } from "./levels/level7.js";
+import { level8 } from "./levels/level8.js";
+import { level9 } from "./levels/level9.js";
+import { level10 } from "./levels/level10.js";
+import { level11 } from "./levels/level11.js";
+import { level12 } from "./levels/level12.js";
+import { level13 } from "./levels/level13.js";
+import { level14 } from "./levels/level14.js";
+import { level15 } from "./levels/level15.js";
+import { level16 } from "./levels/level16.js";
+import { level17 } from "./levels/level17.js";
+import { level18 } from "./levels/level18.js";
+import { level19 } from "./levels/level19.js";
+import { level20 } from "./levels/level20.js";
+import { level21 } from "./levels/level21.js";
+
+const levelCount = document.getElementById("levelCount");
+
+export class Game {
+    constructor(levelList) {
+        this.levelList = [];
+        for (const lev of levelList) {
+            this.levelList.push(lev);
+            lev.game = this;
+            lev.index = this.levelList.length;
+        }
+        this.currentLevelIndex = 1;
+    }
+
+    get currentLevel() {
+        return this.levelList[this.currentLevelIndex - 1];
+    }
+
+    start() {
+        if (this.levelList.length === 0) return;
+        this.currentLevel.drawObjects();
+        this.currentLevel.addControls();
+        levelCount.innerText = "Level " + this.currentLevelIndex;
+        writeInfo(
+            "Press 'Space' to start or pause the game.<br>" +
+                "Press 'r' to restart the level.<br>" +
+                "If you reach the black Goal you come into the next level!"
+        );
+    }
+
+    switchToNextLevel() {
+        this.currentLevelIndex++;
+        if (this.currentLevelIndex > this.levelList.length) {
+            writeInfo("(:<br>" + "You won the game!<br>" + "(:");
+            return;
+        }
+        levelCount.innerText = "Level " + this.currentLevelIndex;
+        this.currentLevel.addControls();
+        this.currentLevel.start();
+    }
+}
+
+export const game = new Game([level1, level2, level3, level4, level5, level6, level7, 
+        level8, level9, level10, level11, level12, level13, level14, level15, level16, 
+         level17, level18, level19,level20, level21]);
+const infoElement = document.getElementById("info");
+
+export function hideInfo() {
+    infoElement.style.display = "none";
+}
+
+export function writeInfo(txt) {
+    infoElement.style.display = "block";
+    infoElement.innerHTML = txt;
+}
+import { canvas, clearCanvas } from "./canvas.js";
+import { hideInfo, writeInfo } from "./info.js";
+import { Timer } from "./Timer.js";
+import { minmax } from "./utils.js";
+
+const STATUS = {
+    READY: 0,
+    STARTED: 1,
+    PAUSED: 2,
+};
+
+export class Level {
+    constructor(options) {
+        this.size = options.size || [canvas.width, canvas.height];
+        this.cameraPos = options.cameraPos || [0, this.size[1] - canvas.height];
+        this.originalCameraPos = [...this.cameraPos];
+        this.objects = [];
+        this.objectsOfType = { Rectangle: [], Player: [], Box: [], Goal: [] };
+        this.addObjects(options.objects || []);
+        this.player = null;
+        this.timer = new Timer();
+        this.timer.update = (deltaTime) => this.update(deltaTime);
+        this.status = STATUS.READY;
+        this.won = false;
+        this.keyFuncRef = (e) => this.keyFunction(e);
+        this.game = null;
+        this.index = null;
+    }
+
+    reset() {
+        this.objects.forEach((obj) => {
+            obj.reset();
+        });
+        this.cameraPos = [...this.originalCameraPos];
+    }
+
+    addControls() {
+        window.addEventListener("keydown", this.keyFuncRef);
+    }
+
+    removeControls() {
+        window.removeEventListener("keydown", this.keyFuncRef);
+    }
+
+    keyFunction(e) {
+        if (e.key === " ") {
+            if (this.status == STATUS.READY) {
+                this.start();
+            } else if (this.status === STATUS.PAUSED && !this.won) {
+                this.resume();
+            } else if (this.status === STATUS.STARTED) {
+                this.pause();
+            }
+        } else if (e.key === "r" && this.status === STATUS.STARTED) {
+            this.reset();
+        }
+    }
+
+    addObject(obj) {
+        const type = obj.constructor.name;
+        this.objects.push(obj);
+        this.objectsOfType[type].push(obj);
+        obj.level = this;
+    }
+
+    addObjects(objects) {
+        objects.forEach((obj) => this.addObject(obj));
+    }
+
+    drawObjects() {
+        this.objects.forEach((obj) => obj.draw());
+    }
+
+    updateObjects(deltaTime) {
+        this.objects.forEach((obj) => obj.update(deltaTime));
+    }
+
+    updateCamera() {
+        this.cameraPos[0] = minmax(
+            this.player.right - canvas.width / 2,
+            0,
+            this.size[0] - canvas.width
+        );
+
+        this.cameraPos[1] = minmax(
+            this.player.top - canvas.height / 2,
+            0,
+            this.size[1] - canvas.height
+        );
+    }
+
+    update(deltaTime) {
+        clearCanvas();
+        this.updateObjects(deltaTime);
+        this.updateCamera();
+        this.drawObjects();
+        this.checkWin();
+    }
+
+    checkWin() {
+        if (!this.won) return;
+        this.status = STATUS.PAUSED;
+        this.timer.pause();
+        this.removeControls();
+        this.game.switchToNextLevel();
+    }
+
+    start() {
+        this.player = this.objectsOfType.Player[0];
+        writeInfo(`Level ${this.index}`);
+        this.status = STATUS.STARTED;
+        this.timer.paused = false;
+        this.timer.start();
+        setTimeout(hideInfo, 2000);
+    }
+
+    pause() {
+        this.status = STATUS.PAUSED;
+        this.timer.pause();
+        writeInfo("Paused");
+    }
+
+    resume() {
+        this.status = STATUS.STARTED;
+        this.timer.paused = false;
+        this.timer.start();
+        hideInfo();
+    }
+}
+import { game } from "./Game.js";
+
+game.start();
+export class Timer {
+    constructor(deltaTime) {
+        this.accumulatedTime = 0;
+        this.lastTime = null;
+        this.paused = false;
+        this.deltaTime = deltaTime || 1000 / 60;
+    }
+
+    start() {
+        requestAnimationFrame(this.loop.bind(this));
+    }
+
+    loop(currentTime) {
+        if (this.paused) return;
+        if (this.lastTime) {
+            this.accumulatedTime += currentTime - this.lastTime;
+            if (this.accumulatedTime > 1000) {
+                this.accumulatedTime = 1000;
+            }
+            while (this.accumulatedTime > this.deltaTime) {
+                this.update(this.deltaTime);
+                this.accumulatedTime -= this.deltaTime;
+            }
+        }
+        this.lastTime = currentTime;
+        this.start();
+    }
+
+    pause() {
+        this.lastTime = null;
+        this.paused = true;
+    }
+
+    update() {
+        return;
+    }
+
+    debug() {
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "d") {
+                this.update(1000 / 60);
+            }
+        });
+    }
+}
+export function minmax(val, min, max) {
+    return Math.max(min, Math.min(max, val));
+}
+export let array = [];
+
+export function resetArray() {
+    array = new Array(9).fill(0).map((x) => new Array(9).fill(0));
+}
+
+export function hasContradiction(row, col, val) {
+    return (
+        rowValues(row).includes(val) ||
+        columnValues(col).includes(val) ||
+        boxValues(row, col).includes(val)
+    );
+}
+
+function rowValues(row) {
+    return array[row];
+}
+
+function columnValues(col) {
+    const list = [];
+    for (let row = 0; row < 9; row++) {
+        list.push(array[row][col]);
+    }
+    return list;
+}
+
+function boxValues(row, col) {
+    const boxRow = row - (row % 3);
+    const boxCol = col - (col % 3);
+    const list = [];
+    for (let r = boxRow; r < boxRow + 3; r++) {
+        for (let c = boxCol; c < boxCol + 3; c++) {
+            list.push(array[r][c]);
+        }
+    }
+    return list;
+}
+
+export function getUnsolvedPosition() {
+    const row = array.findIndex((row) => row.some((x) => x == 0));
+    if (row == -1) {
+        return null;
+    }
+    const col = array[row].findIndex((x) => x == 0);
+    return { row, col };
+}
+
+export function setValue(row, col, val) {
+    array[row][col] = parseInt(val);
+    $(`#cell${row}_${col}`).val(val >= 1 ? val : "");
+}
+import { hasContradiction, array, setValue } from "./arraymethods.js";
+
+export function addBlocks() {
+    for (let row = 0; row < 3; row++) {
+        for (let col = 0; col < 3; col++) {
+            $("<div></div>")
+                .addClass("block")
+                .attr("id", `block${row}_${col}`)
+                .appendTo("#sudoku");
+        }
+    }
+}
+
+export function addCells() {
+    for (let row = 0; row < 9; row++) {
+        for (let col = 0; col < 9; col++) {
+            const blockRow = Math.floor(row / 3);
+            const blockCol = Math.floor(col / 3);
+            $("<input type='number'>")
+                .addClass("cell")
+                .attr("id", `cell${row}_${col}`)
+                .appendTo(`#block${blockRow}_${blockCol}`)
+                .on("input", function () {
+                    $(".cell").removeClass("fixed");
+                    let val = $(this).val();
+                    if (val.length >= 2) {
+                        $(this).val(val.substring(1));
+                    }
+                    val = $(this).val();
+                    let contra = false;
+                    if (
+                        val == parseInt(val) &&
+                        val >= 1 &&
+                        val <= 9
+                    ) {
+                        contra = hasContradiction(
+                            row,
+                            col,
+                            parseInt(val)
+                        );
+                        if (contra) {
+                            setValue(row, col, 0);
+                            $("#info").text(
+                                "This number is not allowed"
+                            );
+                            setTimeout(
+                                () => $("#info").text(""),
+                                1000
+                            );
+                        } else {
+                            array[row][col] = parseInt(val);
+                        }
+                    } else {
+                        $(this).val("");
+                        array[row][col] = 0;
+                    }
+                    if (!contra) {
+                        if (col < 8) {
+                            $(`#cell${row}_${col + 1}`).focus();
+                        } else if (row < 8) {
+                            $(`#cell${row + 1}_${0}`).focus();
+                        }
+                    }
+                });
+        }
+    }
+}
+
+export function focusFirstCell() {
+    $(`.cell`)[0].focus();
+}
+import {
+    hasContradiction,
+    getUnsolvedPosition,
+    setValue,
+} from "./arraymethods.js";
+import { sleep } from "./utils.js";
+import { delay } from "./controls.js";
+
+let solving = false;
+
+export function toggleSolve() {
+    solving ? stopSolve() : startSolve();
+}
+
+function stopSolve() {
+    solving = false;
+    $("#solveBtn").text("Solve");
+}
+
+async function startSolve() {
+    solving = true;
+    $(".cell")
+        .filter(function () {
+            return $(this).val();
+        })
+        .addClass("fixed");
+    $("#solveBtn").text("Stop");
+    $("#info").text("Solving...");
+    $(".cell, #clearBtn").prop("disabled", true);
+    $("#sudoku").addClass("solving");
+    const solution = await solveSudoku();
+    if (solution == "stopped") {
+        $("#info").text("");
+    } else if (solution == true) {
+        $("#info").text("The Sudoku is solved.");
+    } else if (solution == false) {
+        $("#info").text("The Sudoku has no solution.");
+    }
+    $(".cell, #clearBtn").prop("disabled", false);
+    $("#sudoku").removeClass("solving");
+    stopSolve();
+}
+
+async function solveSudoku() {
+    if (delay) await sleep(delay);
+    const pos = getUnsolvedPosition();
+    if (!pos) return true;
+    const { row, col } = pos;
+    for (let val = 1; val <= 9; val++) {
+        if (!hasContradiction(row, col, val)) {
+            setValue(row, col, val);
+            if (!solving) return "stopped";
+            if ((await solveSudoku()) == true) {
+                return true;
+            }
+        }
+    }
+    setValue(row, col, 0);
+    return false;
+}
+import { resetArray } from "./arraymethods.js";
+import { addBlocks, addCells, focusFirstCell } from "./cells.js";
+import { enableControls } from "./controls.js";
+
+$(() => {
+    resetArray();
+    addBlocks();
+    addCells();
+    focusFirstCell();
+    enableControls();
+});
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.link {
+    color: white;
+}
+
+.background {
+    background-color: #252526;
+    height: 100vh;
+    padding-top: 1px;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+}
+
+.display {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+
+}
+
+.tile {
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.playerX {
+    color: #00ff00;
+}
+
+.playerO {
+    color: #1900fc;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.controls button {
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.restart {
+    background-color: #498AFB;
+}
+
+#reset {
+    background-color: #ff0000;
+}
+window.addEventListener('DOMContentLoaded', () => {
+    const tiles = Array.from(document.querySelectorAll('.tile'));
+    const playerDisplay = document.querySelector('.display-player');
+    const resetButton = document.querySelector('#reset');
+    const announcer = document.querySelector('.announcer');
+
+    let board = ['', '', '', '', '', '', '', '', ''];
+    let currentPlayer = 'X';
+    let isGameActive = true;
+
+    const PLAYERX_WON = 'PLAYERX_WON';
+    const PLAYERO_WON = 'PLAYERO_WON';
+    const TIE = 'TIE';
+
+
+    /*
+        Indexes within the board
+        [0] [1] [2]
+        [3] [4] [5]
+        [6] [7] [8]
+    */
+
+    const winningConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
+    function handleResultValidation() {
+        let roundWon = false;
+        for (let i = 0; i <= 7; i++) {
+            const winCondition = winningConditions[i];
+            const a = board[winCondition[0]];
+            const b = board[winCondition[1]];
+            const c = board[winCondition[2]];
+            if (a === '' || b === '' || c === '') {
+                continue;
+            }
+            if (a === b && b === c) {
+                roundWon = true;
+                break;
+            }
+        }
+
+    if (roundWon) {
+            announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
+            isGameActive = false;
+            return;
+        }
+
+    if (!board.includes(''))
+        announce(TIE);
+    }
+
+    const announce = (type) => {
+        switch(type){
+            case PLAYERO_WON:
+                announcer.innerHTML = 'Player <span class="playerO">O</span> hat gewonnen';
+                break;
+            case PLAYERX_WON:
+                announcer.innerHTML = 'Player <span class="playerX">X</span> hat gewonnen';
+                break;
+            case TIE:
+                announcer.innerText = 'Unentschieden';
+        }
+        announcer.classList.remove('hide');
+    };
+
+    const isValidAction = (tile) => {
+        if (tile.innerText === 'X' || tile.innerText === 'O'){
+            return false;
+        }
+
+        return true;
+    };
+
+    const updateBoard =  (index) => {
+        board[index] = currentPlayer;
+    }
+
+    const changePlayer = () => {
+        playerDisplay.classList.remove(`player${currentPlayer}`);
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        playerDisplay.innerText = currentPlayer;
+        playerDisplay.classList.add(`player${currentPlayer}`);
+    }
+
+    const userAction = (tile, index) => {
+        if(isValidAction(tile) && isGameActive) {
+            tile.innerText = currentPlayer;
+            tile.classList.add(`player${currentPlayer}`);
+            updateBoard(index);
+            handleResultValidation();
+            changePlayer();
+        }
+    }
+    
+    const resetBoard = () => {
+        board = ['', '', '', '', '', '', '', '', ''];
+        isGameActive = true;
+        announcer.classList.add('hide');
+
+        if (currentPlayer === 'O') {
+            changePlayer();
+        }
+
+        tiles.forEach(tile => {
+            tile.innerText = '';
+            tile.classList.remove('playerX');
+            tile.classList.remove('playerO');
+        });
+    }
+
+    tiles.forEach( (tile, index) => {
+        tile.addEventListener('click', () => userAction(tile, index));
+    });
+
+    resetButton.addEventListener('click', resetBoard);
+});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube</title>
+    <link rel="stylesheet" href="./css/cube.css">
+
+</head>
+<body>
+    <a href="index.html">Haupseite</a>
+
+    <main id ="stage">
+        <div id="cube">
+            <div style="--color: green" class="face front">
+                <div class="faceContent"></div>
+            </div>
+            <div style="--color: blue" class="face back">
+                <div class="faceContent"></div>  
+            </div>
+            <div style="--color: white" class="face top">
+                <div class="faceContent"></div> 
+            </div>
+            <div style="--color: yellow" class="face bottom">
+                <div class="faceContent"></div>
+            </div>
+            <div style="--color: red" class="face left">
+                <div class="faceContent"></div> 
+            </div>
+            <div style="--color: orange" class="face right">
+                <div class="faceContent"></div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+<!--Seiten beginn-->
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <title>MoinJulian Website</title>
+</head>
+
+<body> 
+    <!--Überschriften-->
+    <h1> <a id="YouTube" href="https://www.youtube.com/channel/UCls1hOj_UaT9Kl-8V22ylag" style="color: red;">Dies ist die Website von <img src="./img/moinjulian.ico" width="50"> MoinJulian</a></h1>   
+    <h3>Meine fertigen Projekte!</h3>
+    <br>
+    <!--Links-->
+    <a class="link" href="jumpandrun.html">Jump and Run</a>
+    <br>
+    <a class="link" href="taschenrechner.html">Taschenrechner</a>
+    <br>
+    <a class="link" href="timer.html">5 Minuten Timer</a>
+    <br>
+    <a class="link" href="sudoku.html">Sudoku Solver</a>
+    <br>
+    <a class="link" href="cube.html">3d Würfel</a>
+    <br>
+    <a class="link" href="snake.html">Snake Game</a>
+    <br>
+    <a class="link" href="tictactoe.html"> Tic Tac Toe</a>
+    <br>
+    <!--Text-->
+    <p class="text">Oben seht ihr alle meine fertigen Projekte!
+        <br>Wenn ihr auf die Überschrift klickt kommt ihr zu meinem YouTube Kanal.
+        <br>Auf diesem Kanal gibt es nützliche Tutorials zu HTML, JavaScript und CSS.
+        <br>Ich mache jede Woche Samstag um 18 Uhr ein Video auf meinem Kanal <a class="kanal" href="https://www.youtube.com/channel/UCls1hOj_UaT9Kl-8V22ylag">MoinJulian</a>
+        <br><b class="fett">Diese Website ist stets unter Bearbeitung.</b>
+    </p>
+</body>
+
+</html>
+<p>Hier könnt ihr ein Jump and Run Spiel spielen!</p>
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+            <title>Jump and Run</title>
+            <link rel="stylesheet" href="./css/style.css" />
+        </head>
+        <body>
+            <br>
+            <a id="link" href="index.html">Hauptseite</a>
+            <main>
+                <canvas id="canvas" width="800" height="600"></canvas>
+                <small id="levelCount"></small>
+                <section id="info"></section>
+            </main>
+    
+            <script src="./jumpandrunjs/main.js" type="module"></script>
+        </body>
+    </html>
+    {
+    "theme_color" : "#252526",
+    "background_color" : "#252526",
+    "display" : "fullscreen",
+    "scope" : "/",
+    "start_url" : "/index.html",
+    "name" : "MoinJulian",
+    "short_name" : "MoinJulian"
+    }
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/snake.css">
+    <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+</head>
+<body>
+    <a id="link" href="index.html">Hauptseite</a>
+    <main>
+        <canvas id="canvas" width="480" height="480"></canvas>
+    </main>
+    <script>
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        let rows = 20;
+        let cols = 20;
+        let snake = [
+            {x: 19, y: 3}
+        ];
+        let food;
+        let cellWidth = canvas.width / cols;
+        let cellHeight = canvas.height / rows;
+        let direction = 'LEFT';
+        let foodCollected = false;
+
+        placeFood();
+
+        setInterval(gameLoop, 200);
+
+        document.addEventListener("keydown", keyDown);
+
+        draw();
+
+        function draw() {
+            ctx.fillStyle = "black";
+            ctx.fillRect(10, 20, 20, 20);
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "white";
+
+            snake.forEach(part => add(part.x, part.y));
+
+            ctx.fillStyle = "yellow";
+            add(food.x, food.y); //Food
+
+            requestAnimationFrame(draw);
+        }
+
+        function testGameOver() {
+
+            let firstPart = snake[0];
+            let otherParts = snake.slice(1);
+            let duplicatePart = otherParts.find(part => part.x == firstPart.x && part.y == firstPart.y);
+
+            // 1. Schalnge läuft gegen die Wand
+            if(snake[0].x < 0 ||
+                snake[0].x > cols - 1 ||
+                snake[0].y < 0 ||
+                snake[0].y > rows - 1 ||
+                duplicatePart  ) 
+                {
+                    placeFood();
+                    snake = [{x: 19, y: 3}];
+                    direction = 'LEFT';
+            } 
+
+        }
+
+        function placeFood() { //Futter plazieren
+            let randomX = Math.floor(Math.random() * cols);
+            let randomY = Math.floor(Math.random() * rows);
+
+            food = {x:randomX, y: randomY};
+        }
+
+        function add(x, y) { //schlange zeichnen
+            ctx.fillRect(x * cellWidth, y * cellHeight, cellWidth - 1, cellHeight - 1);
+        } 
+
+        function shiftSnake() {
+            for (let i = snake.length - 1; i > 0; i--) {
+                const part = snake[i];
+                const lastPart = snake[i - 1];
+                part.x = lastPart.x;
+                part.y = lastPart.y;
+                
+            }
+        }
+
+        function gameLoop() { 
+            testGameOver();
+            if(foodCollected) {
+                snake = [
+                    {x: snake[0].x, y: snake[0].y},
+                    ...snake];
+
+                    foodCollected = false;
+            }
+
+            shiftSnake();
+
+            if(direction == 'LEFT') { //Key Abfrage
+                snake[0].x--;
+            }
+            if(direction == 'RIGHT') { //Key Abfrage
+                snake[0].x++;
+            }
+            if(direction == 'UP') { //Key Abfrage
+                snake[0].y--;
+            }
+            if(direction == 'DOWN') { //Key Abfrage
+                snake[0].y++;
+            }
+
+            if(snake[0].x == food.x && 
+                snake[0].y == food.y ){
+                    foodCollected = true;
+
+                    placeFood();
+            }
+            
+        }
+
+        function keyDown(e) { //KeyBelegung
+            if (e.keyCode == 37) {
+                direction = 'LEFT'
+            }
+            if (e.keyCode == 38) {
+                direction = 'UP'
+            }
+            if (e.keyCode == 39) {
+                direction = 'RIGHT'
+            }
+            if (e.keyCode == 40) {
+                direction = 'DOWN'
+            }
+
+        }
+
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="./css/sudoku.css">
+
+</head>
+<body>
+    <header>
+        <h1>Sudoku Solver</h1>
+    </header>
+    <a id="link" href="index.html">Hauptseite</a>
+    <br>
+    <main>
+        <section id="controls">
+            <button id="solveBtn">Solve</button>
+            <button id="clearBtn">Clear</button>
+            <!-- <button id="fasterBtn">Faster</button>
+            <button id="slowerBtn">Slower</button> -->
+        </section>
+        <section id="sudoku">
+        </section>
+        <section id="info"></section>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="./sudokuscript/sudoku.js" type="Module"></script>
+</body>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/calculator.css">
+    <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+    <title>Taschenrechner</title>
+    <script src="./calculatorskript/calculator.js"></script>
+</head>
+<body>
+    <p id="taschenrechner">Hier habt ihr auch noch einen Taschenrechner</p>
+    <a href="index.html">Hauptseite</a>
+    <br>
+    <div id="resultArea">
+
+    </div>
+
+    <table>
+        <tr>
+            <td onclick="appendOperation('(')" class="highlight">(</td>
+            <td onclick="appendOperation(')')" class="highlight">)</td>
+            <td onclick="deleteAll()" class="highlight">DEL ALL (a)</td>
+            <td onclick="deleteLast()" class="highlight">DEL (d)</td>
+        </tr>
+
+        <tr>
+            <td onclick="appendOperation(7)">7</td>
+            <td onclick="appendOperation(8)">8</td>
+            <td onclick="appendOperation(9)">9</td>
+            <td onclick="appendOperation(' / ')" class="highlight">/</td>
+        </tr>
+
+        <tr>
+            <td onclick="appendOperation(4)">4</td>
+            <td onclick="appendOperation(5)">5</td>
+            <td onclick="appendOperation(6)">6</td>
+            <td onclick="appendOperation(' * ')" class="highlight">x</td>
+        </tr>
+
+        <tr>
+            <td onclick="appendOperation(1)">1</td>
+            <td onclick="appendOperation(2)">2</td>
+            <td onclick="appendOperation(3)">3</td>
+            <td onclick="appendOperation(' + ')" class="highlight">+</td>
+        </tr>
+
+        <tr>
+            <td onclick="appendOperation(0)">0</td>
+            <td onclick="appendOperation('.')" class="highlight">.</td>
+            <td onclick="calculatResult()" id="result">= (space)</td>
+            <td onclick="appendOperation(' - ')" class="highlight">-</td>
+        </tr>
+
+    </table>
+
+</bod>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./tictactoe/tictactoe.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <script src="./tictactoe/tictactoe.js"></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <main class="background">
+        <br>
+        <a class="link" href="index.html">Hauptseite</a>
+        <section class="title">
+            <h1>Tic Tac Toe</h1>
+        </section>
+        <section class="display">
+            Player <span class="display-player playerX">X</span> ist dran!
+        </section>
+        <section class="container">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </section>
+        <section class="display announcer hide"></section>
+        <section class="controls">
+            <button id="reset">Reset</button>
+        </section>
+    </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+    <title>Timer</title>
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+        .background-dark {
+            background-color: #262626;
+        }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+        
+        a {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .margin-top {
+            margin-top: 100px;
+        }
+        
+        .timer {
+            font-size: 30px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .start {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10vw;
+            height: 5vh;
+            background-color: darkred;
+        }
+
+        .start:hover {
+            cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+        let alarm = new Audio('./alarm/Eieruhr_alarm.mp3');
+        let timerStarted = false;
+        let timerlenght = 5;
+
+        function stopTimer() {
+            if (timerStarted) {
+                let stopTimer = location.reload();
+            }
+        }
+
+        function startTimer() {
+            if (!timerStarted) {
+                let startTime = new Date().getTime();
+                let fiveMinutes = 1000 * 60 * timerlenght;
+                let endTime = startTime + fiveMinutes;
+
+
+                setInterval(function() {
+                    let timeLeft = endTime - new Date().getTime();
+
+
+                    if (timeLeft > 0) {
+                        let minutes = timeLeft / (1000 * 60);
+                        minutes = Math.floor(minutes);
+                        let seconds = (timeLeft / 1000) % 60;
+                        seconds = Math.round(seconds);
+                        seconds = ('0' + seconds).slice(-2);
+                        let text = minutes  +  ' : '  +  seconds;
+                        timer.innerHTML = text;
+                    } else {
+                        alarm.play();
+                        timer.innerHTML = '00 : 00';
+                    }
+                }, 1000);
+                timerStarted = true;
+            }
+        }
+    </script>
+
+</head>
+
+<body class="background-dark">
+    <a href="index.html">Hauptseite</a>
+
+    <div class="center margin-top timer" id="timer">5 : 00</div>
+
+
+    <div class="center margin-top timer">
+        <table>
+            <tr>
+                <td onclick="startTimer()" class="start" id="start">Start</td>
+                <td><table>
+                   <td></td>
+                   <td></td>
+                   <td></td> 
+                </table></td>
+                <td onclick="stopTimer()" class="start" id="stop">Stop</td>
+            </tr>       
+        </table>
+    </div>
+
+</body>
+
+</html>
