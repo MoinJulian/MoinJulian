@@ -6,7 +6,7 @@ export class Player extends Box {
             {
                 pos: options.pos,
                 size: options.size,
-                color: "red",
+                color: options.color || "red",
                 grav: 0.004,
                 friction: 0.2,
             },
