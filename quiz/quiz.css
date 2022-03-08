@@ -1,0 +1,40 @@
+body {
+    background-color: #252526;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    background-color: darkred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: auto;
+}
+
+.answer {
+    background-color: darkgoldenrod;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100%;
+    text-align: none;
+}
+
+.answer:hover {
+    cursor: pointer;
+}
+
+.link {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
