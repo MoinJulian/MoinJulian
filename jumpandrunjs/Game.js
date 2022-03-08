@@ -61,7 +61,7 @@ export class Game {
             lev.game = this;
             lev.index = this.levelList.length;
         }
-        this.currentLevelIndex = 9;
+        this.currentLevelIndex = 1;
     }
 
     get currentLevel() {
