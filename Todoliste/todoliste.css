@@ -20,6 +20,7 @@ body {
 }
 
 #eingabe {
+    size: 25%;
     border: 5px;
     color: white;
     background-color: white;
