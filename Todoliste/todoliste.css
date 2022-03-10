@@ -17,8 +17,8 @@ body {
 
 #eingabe {
     display: flex;
-    justify-content: flex-start;
-    align-items: 10vh;
+    justify-content: 10vh;
+    align-items: flex-start;
     border: 5px;
     color: white;
     background-color: white;
