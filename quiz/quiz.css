@@ -13,6 +13,7 @@ body {
 .question {
     background-color: darkred;
     display: flex;
+    height: auto;
     justify-content: center;
     align-items: center;
     margin-top: 10%;
@@ -22,6 +23,7 @@ body {
 .answer {
     background-color: darkgoldenrod;
     width: auto;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,6 +36,7 @@ body {
 }
 
 .link {
+    text-decoration: none;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -47,4 +50,9 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 30vh;
+}
+
+#linkh {
+    text-decoration: underline;
+    color: white;
 }

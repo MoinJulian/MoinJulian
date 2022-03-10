@@ -4,6 +4,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+:root {
+    --main-color: darkred;
+    --main-color-light: rgba(0, 128, 128, 0.8);
+}
+
 .link {
     color: white;
 }
@@ -15,7 +20,7 @@
 }
 
 .title {
-    color: white;
+    color: darkred;
     text-align: center;
     font-size: 40px;
     margin-top: 10%;
@@ -54,11 +59,11 @@
 }
 
 .playerX {
-    color: #00ff00;
+    color: #006900;
 }
 
 .playerO {
-    color: #1900fc;
+    color: #070049;
 }
 
 .controls {
@@ -72,7 +77,6 @@
 .controls button {
     color: white;
     padding: 8px;
-    border-radius: 8px;
     border: none;
     font-size: 20px;
     margin-left: 1em;
@@ -84,5 +88,8 @@
 }
 
 #reset {
-    background-color: #ff0000;
+    background: linear-gradient(
+                var(--main-color),
+                var(--main-color-light)
+    );;
 }

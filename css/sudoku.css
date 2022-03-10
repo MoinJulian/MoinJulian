@@ -3,7 +3,7 @@
 :root {
     --block-border-color: #666;
     --cell-border-color: #bbb;
-    --main-color: teal;
+    --main-color: darkred;
     --main-color-light: rgba(0, 128, 128, 0.8);
     --fixed-color: rgb(245, 205, 205);
     --cell-size: min(45px, 8vw);

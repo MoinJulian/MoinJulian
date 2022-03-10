@@ -10,6 +10,12 @@
     <link rel="manifest" href="manifest.json">
 
     <style>
+
+        :root {
+            --main-color: darkred;
+            --main-color-light: rgba(0, 128, 128, 0.8);
+        }
+
         .background-dark {
             background-color: #262626;
         }
@@ -42,7 +48,10 @@
             align-items: center;
             width: 15vw;
             height: 5vh;
-            background-color: darkred;
+            background: linear-gradient(
+                var(--main-color),
+                var(--main-color-light)
+    );;
         }
 
         .start:hover {
