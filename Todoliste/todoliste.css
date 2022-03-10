@@ -16,6 +16,9 @@ body {
 }
 
 #eingabe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: 10vh;
     border: 5px;
     color: white;
     background-color: rgb(37, 37, 38);
