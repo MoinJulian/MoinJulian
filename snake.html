@@ -36,10 +36,10 @@
         draw();
 
         function draw() {
-            ctx.fillStyle = "black";
+            ctx.fillStyle = "#252526";
             ctx.fillRect(10, 20, 20, 20);
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "white";
+            ctx.fillStyle = "gray";
 
             snake.forEach(part => add(part.x, part.y));
 
