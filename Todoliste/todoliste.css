@@ -16,6 +16,7 @@ body {
         var(--main-color-light)
     );
     color: white;
+    border: 0px;
 }
 
 #eingabe {
