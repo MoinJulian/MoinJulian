@@ -9,3 +9,7 @@
         var(--main-color-light)
     );
 }
+
+#eingabe {
+    border: 1px;
+}
