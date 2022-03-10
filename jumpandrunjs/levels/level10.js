@@ -7,8 +7,13 @@ import { Goal } from "../objects/Goal.js";
 export const level10 = new Level({
     size: [800, 600],
     objects: [
-        new Rectangle({ pos: [400, 300], size: [50, 100]}),
         new Player({ pos: [0, 600], size: [40, 40] }),
-        new Box({ pos: [800, 0], size: [40, 40]}),
+        new Rectangle({ pos: [100, 500], size: [10,100], color: "blue"}),
+        new Rectangle({ pos: [100, 500], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [150, 460], size: [10, 50], color: "blue"}),
+        new Rectangle({ pos: [150, 450], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [200, 450], size: [10, 100], color: "blue"}),
+        new Box({ pos: [200, 550], size: [10, 50], color: "white"}),
+        new Goal({ pos: [120, 560], size: [40, 40], color:"black"}),
     ],
 });
