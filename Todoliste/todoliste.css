@@ -5,8 +5,8 @@
 
 body {
     display: flex;
-    justify-content: 10vh;
-    align-items: flex-start;
+    justify-content: 25vh;
+    align-items: center;
     background-color:rgb(37, 37, 38);
 }
 
