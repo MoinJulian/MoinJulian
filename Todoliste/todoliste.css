@@ -4,6 +4,9 @@
 }
 
 body {
+    display: flex;
+    justify-content: 10vh;
+    align-items: flex-start;
     background-color:rgb(37, 37, 38);
 }
 
@@ -16,9 +19,6 @@ body {
 }
 
 #eingabe {
-    display: flex;
-    justify-content: 10vh;
-    align-items: flex-start;
     border: 5px;
     color: white;
     background-color: white;
