@@ -1,0 +1,11 @@
+:root {
+    --main-color: darkred;
+    --main-color-light: rgba(0, 128, 128, 0.8);
+}
+
+#speichern {
+    background: linear-gradient(
+        var(--main-color),
+        var(--main-color-light)
+    );
+}
