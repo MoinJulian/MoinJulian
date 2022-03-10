@@ -119,6 +119,7 @@ td:hover {
     }
 
     #resultArea {
+        width: 100%;
         height: 30vh;
         background-color: rgb(45, 45, 45);
         color: white;
@@ -139,7 +140,7 @@ td:hover {
     .highlight {
         background-color: rgb(25, 25, 25);
     }
-    * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -302,59 +303,12 @@ main {
 body {
     background-color: #252526;
 }
-* {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    background-color: rgb(37, 37, 38);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #eee;
-}
-
-#link {
-    color: white;
-}
-
-
-
-main {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-}
-
-#info {
-    display: none;
-    text-align: center;
-    position: absolute;
-    font-size: 30px;
-    font-weight: 600;
-    background-color: rgb(0, 0, 250, 0.7);
-    padding: 20px 50px;
-}
-
-#levelCount {
-    margin-top: 10px;
-    opacity: 0.6;
-    width: 800px;
-    text-align: right;
-    font-size: 18px;
-}
-
-canvas {
-    background-color: #eee;
-}
 /* global stuff */
 
 :root {
     --block-border-color: #666;
     --cell-border-color: #bbb;
-    --main-color: teal;
+    --main-color: darkred;
     --main-color-light: rgba(0, 128, 128, 0.8);
     --fixed-color: rgb(245, 205, 205);
     --cell-size: min(45px, 8vw);
@@ -616,7 +570,7 @@ export const level5 = new Level({
         new Rectangle({ pos: [630, 250], size: [90, 10], color:"blue"}), //Rechteck unter dem Goal
         new Rectangle({ pos: [550, 50], size: [10, 500], color:"gray"}),
         new Box({pos: [550, 550], size: [10, 60], color: "gray"}),
-        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"})
+        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"}),
     ],
 });
 import { Level } from "../Level.js";
@@ -646,7 +600,8 @@ export const level7 = new Level({
     objects: [
         new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
         new Player({ pos: [30, 1160], size: [40, 40] }),
-        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({pos: [600, -100], size: [10, 1250], color:"blue"}),
+        new Box({ pos: [600, 1150], size: [10, 50], color:"blue"}),
         new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
         new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
         new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
@@ -663,11 +618,82 @@ import { Goal } from "../objects/Goal.js";
 export const level8 = new Level({
     size: [800, 1200],
     objects: [
+        new Rectangle({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Rectangle({pos: [400, 1100], size: [10, 50], color:"blue"}),
+        new Goal({ pos: [400, 1150], size: [10, 50], color: "blue" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level9 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({pos: [60, 400], size: [10, 200], color: "blue"}),
+        new Rectangle({pos: [120, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [180, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [240, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [300, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [360, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [420, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [480, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [540, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [600, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [660, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [720, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [740, 150], size: [10, 450], color: "blue"}),
+        new Goal({pos: [760, 560], size: [40, 40], color: "black"})
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level10 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [100, 500], size: [10,100], color: "blue"}),
+        new Rectangle({ pos: [100, 500], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [150, 460], size: [10, 50], color: "blue"}),
+        new Rectangle({ pos: [150, 450], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [200, 450], size: [10, 100], color: "blue"}),
+        new Box({ pos: [200, 550], size: [10, 50], color: "blue"}),
+        new Goal({ pos: [120, 560], size: [40, 40], color:"black"}),
+    ],
+});
+export const level1 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [125, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [600, 250], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [50, 100], size: [200, 10], color: "blue" }),
+        new Box({ pos: [180, 500], size: [60, 100], color: "orange" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level2 = new Level({
+    size: [800, 1200],
+    objects: [
         new Goal({ pos: [10, 30], size: [50, 50], color: "black" }),
         new Player({ pos: [30, 1160], size: [40, 40] }),
         new Rectangle({ pos: [600, 1000], size: [100, 10], color: "blue" }),
         new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
         new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [100, 10], color: "blue" }),
         new Rectangle({ pos: [400, 400], size: [140, 10], color: "blue" }),
         new Box({ pos: [450, 350], size: [50, 50], color: "purple" }),
     ],
@@ -678,7 +704,7 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level9 = new Level({
+export const level3 = new Level({
     size: [800, 600],
     objects: [
         new Goal({ pos: [650, 250], size: [50, 50], color: "black" }),
@@ -704,7 +730,59 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level10 = new Level({
+export const level4 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level5 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Goal({ pos: [650, 200], size: [50, 50], color: "black" }),
+        new Rectangle({ pos: [630, 250], size: [90, 10], color:"blue"}), //Rechteck unter dem Goal
+        new Rectangle({ pos: [550, 50], size: [10, 500], color:"gray"}),
+        new Box({pos: [550, 550], size: [10, 60], color: "gray"}),
+        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level6 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [400, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 50], size: [10, 50], color: "black"}),
+        new Rectangle({ pos: [100, 400], size: [60, 10], color:"blue"}),
+        new Rectangle({ pos: [0, 200], size: [60, 10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level7 = new Level({
     size: [800, 1200],
     objects: [
         new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
@@ -724,14 +802,13 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level11 = new Level({
+export const level8 = new Level({
     size: [800, 1200],
     objects: [
         new Rectangle({ pos: [750, 1150], size: [50, 50], color: "black" }),
         new Rectangle({pos: [400, 1100], size: [10, 50], color:"blue"}),
         new Goal({ pos: [400, 1150], size: [10, 50], color: "blue" }),
         new Player({ pos: [30, 1160], size: [40, 40] }),
-        
     ],
 });
 import { Level } from "../Level.js";
@@ -740,17 +817,24 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level12 = new Level({
-    size: [800, 1200],
+export const level9 = new Level({
+    size: [800, 600],
     objects: [
-        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
-        new Player({ pos: [30, 1160], size: [40, 40] }),
-        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
-        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({pos: [60, 400], size: [10, 200], color: "blue"}),
+        new Rectangle({pos: [120, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [180, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [240, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [300, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [360, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [420, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [480, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [540, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [600, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [660, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [720, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [740, 150], size: [10, 450], color: "blue"}),
+        new Goal({pos: [760, 560], size: [40, 40], color: "black"})
     ],
 });
 import { Level } from "../Level.js";
@@ -759,7 +843,20 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level13 = new Level({
+export const level10 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [100, 500], size: [10,100], color: "blue"}),
+        new Rectangle({ pos: [100, 500], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [150, 460], size: [10, 50], color: "blue"}),
+        new Rectangle({ pos: [150, 450], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [200, 450], size: [10, 100], color: "blue"}),
+        new Box({ pos: [200, 550], size: [10, 50], color: "blue"}),
+        new Goal({ pos: [120, 560], size: [40, 40], color:"black"}),
+    ],
+});
+export const level1 = new Level({
     size: [800, 600],
     objects: [
         new Goal({ pos: [125, 50], size: [50, 50], color: "black" }),
@@ -775,78 +872,7 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level14 = new Level({
-    size: [800, 1200],
-    objects: [
-        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
-        new Player({ pos: [30, 1160], size: [40, 40] }),
-        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
-        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
-    ],
-});
-import { Level } from "../Level.js";
-import { Player } from "../objects/Player.js";
-import { Rectangle } from "../objects/Rectangle.js";
-import { Box } from "../objects/Box.js";
-import { Goal } from "../objects/Goal.js";
-
-export const level15 = new Level({
-    size: [800, 600],
-    objects: [
-        new Player({ pos: [0, 600], size: [40, 40] }),
-        new Goal({ pos: [650, 200], size: [50, 50], color: "black" }),
-        new Rectangle({ pos: [630, 250], size: [90, 10], color:"blue"}), //Rechteck unter dem Goal
-        new Rectangle({ pos: [550, 50], size: [10, 500], color:"gray"}),
-        new Box({pos: [550, 550], size: [10, 60], color: "gray"}),
-        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"})
-    ],
-});
-import { Level } from "../Level.js";
-import { Player } from "../objects/Player.js";
-import { Rectangle } from "../objects/Rectangle.js";
-import { Box } from "../objects/Box.js";
-import { Goal } from "../objects/Goal.js";
-
-export const level16 = new Level({
-    size: [800, 600],
-    objects: [
-        new Goal({ pos: [400, 50], size: [50, 50], color: "black" }),
-        new Player({ pos: [20, 600], size: [40, 40] }),
-        new Rectangle({ pos: [400, 50], size: [10, 50], color: "black"}),
-        new Rectangle({ pos: [100, 400], size: [60, 10], color:"blue"}),
-        new Rectangle({ pos: [0, 200], size: [60, 10], color:"blue"}),
-    ],
-});
-import { Level } from "../Level.js";
-import { Player } from "../objects/Player.js";
-import { Rectangle } from "../objects/Rectangle.js";
-import { Box } from "../objects/Box.js";
-import { Goal } from "../objects/Goal.js";
-
-export const level17 = new Level({
-    size: [800, 1200],
-    objects: [
-        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
-        new Player({ pos: [30, 1160], size: [40, 40] }),
-        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
-        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
-        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
-    ],
-});
-import { Level } from "../Level.js";
-import { Player } from "../objects/Player.js";
-import { Rectangle } from "../objects/Rectangle.js";
-import { Box } from "../objects/Box.js";
-import { Goal } from "../objects/Goal.js";
-
-export const level18 = new Level({
+export const level2 = new Level({
     size: [800, 1200],
     objects: [
         new Goal({ pos: [10, 30], size: [50, 50], color: "black" }),
@@ -854,6 +880,7 @@ export const level18 = new Level({
         new Rectangle({ pos: [600, 1000], size: [100, 10], color: "blue" }),
         new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
         new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [100, 10], color: "blue" }),
         new Rectangle({ pos: [400, 400], size: [140, 10], color: "blue" }),
         new Box({ pos: [450, 350], size: [50, 50], color: "purple" }),
     ],
@@ -864,7 +891,7 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level19 = new Level({
+export const level3 = new Level({
     size: [800, 600],
     objects: [
         new Goal({ pos: [650, 250], size: [50, 50], color: "black" }),
@@ -890,7 +917,7 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level20 = new Level({
+export const level4 = new Level({
     size: [800, 1200],
     objects: [
         new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
@@ -909,11 +936,498 @@ import { Rectangle } from "../objects/Rectangle.js";
 import { Box } from "../objects/Box.js";
 import { Goal } from "../objects/Goal.js";
 
-export const level21 = new Level({
+export const level5 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Goal({ pos: [650, 200], size: [50, 50], color: "black" }),
+        new Rectangle({ pos: [630, 250], size: [90, 10], color:"blue"}), //Rechteck unter dem Goal
+        new Rectangle({ pos: [550, 50], size: [10, 500], color:"gray"}),
+        new Box({pos: [550, 550], size: [10, 60], color: "gray"}),
+        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level6 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [400, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 50], size: [10, 50], color: "black"}),
+        new Rectangle({ pos: [100, 400], size: [60, 10], color:"blue"}),
+        new Rectangle({ pos: [0, 200], size: [60, 10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level7 = new Level({
     size: [800, 1200],
     objects: [
-        new Goal({ pos: [400, 1160], size: [40, 40], color: "white" }),
-        new Player({ pos: [400, 1160], size: [40, 40] }),
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, -100], size: [10, 1250], color:"blue"}),
+        new Box({ pos: [600, 1150], size: [10, 50], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level8 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Rectangle({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Rectangle({pos: [400, 1100], size: [10, 50], color:"blue"}),
+        new Goal({ pos: [400, 1150], size: [10, 50], color: "blue" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level9 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({pos: [60, 400], size: [10, 200], color: "blue"}),
+        new Rectangle({pos: [120, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [180, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [240, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [300, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [360, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [420, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [480, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [540, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [600, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [660, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [720, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [740, 150], size: [10, 450], color: "blue"}),
+        new Goal({pos: [760, 560], size: [40, 40], color: "black"})
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level10 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [100, 500], size: [10,100], color: "blue"}),
+        new Rectangle({ pos: [100, 500], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [150, 460], size: [10, 50], color: "blue"}),
+        new Rectangle({ pos: [150, 450], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [200, 450], size: [10, 100], color: "blue"}),
+        new Box({ pos: [200, 550], size: [10, 50], color: "blue"}),
+        new Goal({ pos: [120, 560], size: [40, 40], color:"black"}),
+    ],
+});
+export const level1 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [125, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [600, 250], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [50, 100], size: [200, 10], color: "blue" }),
+        new Box({ pos: [180, 500], size: [60, 100], color: "orange" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level2 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [10, 30], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({ pos: [600, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [140, 10], color: "blue" }),
+        new Box({ pos: [450, 350], size: [50, 50], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level3 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [650, 250], size: [50, 50], color: "black" }),
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 180], size: [10, 420], color: "blue" }),
+        new Rectangle({ pos: [520, 0], size: [10, 480], color: "blue" }),
+        new Rectangle({ pos: [350, 240], size: [10, 180], color: "blue" }),
+        new Rectangle({ pos: [0, 320], size: [350, 10], color: "blue" }),
+        new Rectangle({ pos: [0, 500], size: [360, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [110, 10], color: "blue" }),
+        new Rectangle({ pos: [100, 410], size: [250, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [10, 80], color: "blue" }),
+        new Rectangle({ pos: [630, 300], size: [135, 10], color: "blue" }),
+        new Box({ pos: [200, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [60, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [200, 370], size: [40, 40], color: "teal" }),
+        new Box({ pos: [310, 110], size: [60, 60], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level4 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level5 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Goal({ pos: [650, 200], size: [50, 50], color: "black" }),
+        new Rectangle({ pos: [630, 250], size: [90, 10], color:"blue"}), //Rechteck unter dem Goal
+        new Rectangle({ pos: [550, 50], size: [10, 500], color:"gray"}),
+        new Box({pos: [550, 550], size: [10, 60], color: "gray"}),
+        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level6 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [400, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 50], size: [10, 50], color: "black"}),
+        new Rectangle({ pos: [100, 400], size: [60, 10], color:"blue"}),
+        new Rectangle({ pos: [0, 200], size: [60, 10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level7 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, -100], size: [10, 1250], color:"blue"}),
+        new Box({ pos: [600, 1150], size: [10, 50], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level8 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Rectangle({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Rectangle({pos: [400, 1100], size: [10, 50], color:"blue"}),
+        new Goal({ pos: [400, 1150], size: [10, 50], color: "blue" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level9 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({pos: [60, 400], size: [10, 200], color: "blue"}),
+        new Rectangle({pos: [120, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [180, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [240, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [300, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [360, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [420, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [480, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [540, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [600, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [660, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [720, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [740, 150], size: [10, 450], color: "blue"}),
+        new Goal({pos: [760, 560], size: [40, 40], color: "black"})
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level10 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [100, 500], size: [10,100], color: "blue"}),
+        new Rectangle({ pos: [100, 500], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [150, 460], size: [10, 50], color: "blue"}),
+        new Rectangle({ pos: [150, 450], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [200, 450], size: [10, 100], color: "blue"}),
+        new Box({ pos: [200, 550], size: [10, 50], color: "blue"}),
+        new Goal({ pos: [120, 560], size: [40, 40], color:"black"}),
+    ],
+});
+export const level1 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [125, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [600, 250], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [50, 100], size: [200, 10], color: "blue" }),
+        new Box({ pos: [180, 500], size: [60, 100], color: "orange" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level2 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [10, 30], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({ pos: [600, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 400], size: [140, 10], color: "blue" }),
+        new Box({ pos: [450, 350], size: [50, 50], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level3 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [650, 250], size: [50, 50], color: "black" }),
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 180], size: [10, 420], color: "blue" }),
+        new Rectangle({ pos: [520, 0], size: [10, 480], color: "blue" }),
+        new Rectangle({ pos: [350, 240], size: [10, 180], color: "blue" }),
+        new Rectangle({ pos: [0, 320], size: [350, 10], color: "blue" }),
+        new Rectangle({ pos: [0, 500], size: [360, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [110, 10], color: "blue" }),
+        new Rectangle({ pos: [100, 410], size: [250, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 170], size: [10, 80], color: "blue" }),
+        new Rectangle({ pos: [630, 300], size: [135, 10], color: "blue" }),
+        new Box({ pos: [200, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [60, 460], size: [40, 40], color: "teal" }),
+        new Box({ pos: [200, 370], size: [40, 40], color: "teal" }),
+        new Box({ pos: [310, 110], size: [60, 60], color: "purple" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level4 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, 50], size: [10, 1200], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level5 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Goal({ pos: [650, 200], size: [50, 50], color: "black" }),
+        new Rectangle({ pos: [630, 250], size: [90, 10], color:"blue"}), //Rechteck unter dem Goal
+        new Rectangle({ pos: [550, 50], size: [10, 500], color:"gray"}),
+        new Box({pos: [550, 550], size: [10, 60], color: "gray"}),
+        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level6 = new Level({
+    size: [800, 600],
+    objects: [
+        new Goal({ pos: [400, 50], size: [50, 50], color: "black" }),
+        new Player({ pos: [20, 600], size: [40, 40] }),
+        new Rectangle({ pos: [400, 50], size: [10, 50], color: "black"}),
+        new Rectangle({ pos: [100, 400], size: [60, 10], color:"blue"}),
+        new Rectangle({ pos: [0, 200], size: [60, 10], color:"blue"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level7 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+        new Rectangle({pos: [600, -100], size: [10, 1250], color:"blue"}),
+        new Box({ pos: [600, 1150], size: [10, 50], color:"blue"}),
+        new Rectangle({ pos: [300, 1000], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [400, 800], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [200, 600], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [450, 400], size: [100, 10], color: "blue" }),
+        new Rectangle({ pos: [300, 250], size: [100, 10], color: "blue" }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level8 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Rectangle({ pos: [750, 1150], size: [50, 50], color: "black" }),
+        new Rectangle({pos: [400, 1100], size: [10, 50], color:"blue"}),
+        new Goal({ pos: [400, 1150], size: [10, 50], color: "blue" }),
+        new Player({ pos: [30, 1160], size: [40, 40] }),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level9 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({pos: [60, 400], size: [10, 200], color: "blue"}),
+        new Rectangle({pos: [120, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [180, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [240, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [300, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [360, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [420, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [480, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [540, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [600, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [660, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [720, 400], size: [10, 10], color: "blue"}),
+        new Rectangle({pos: [740, 150], size: [10, 450], color: "blue"}),
+        new Goal({pos: [760, 560], size: [40, 40], color: "black"})
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level10 = new Level({
+    size: [800, 600],
+    objects: [
+        new Player({ pos: [0, 600], size: [40, 40] }),
+        new Rectangle({ pos: [100, 500], size: [10,100], color: "blue"}),
+        new Rectangle({ pos: [100, 500], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [150, 460], size: [10, 50], color: "blue"}),
+        new Rectangle({ pos: [150, 450], size: [50, 10], color: "blue"}),
+        new Rectangle({ pos: [200, 450], size: [10, 100], color: "blue"}),
+        new Box({ pos: [200, 550], size: [10, 50], color: "blue"}),
+        new Goal({ pos: [120, 560], size: [40, 40], color:"black"}),
+    ],
+});
+import { Level } from "../Level.js";
+import { Player } from "../objects/Player.js";
+import { Rectangle } from "../objects/Rectangle.js";
+import { Box } from "../objects/Box.js";
+import { Goal } from "../objects/Goal.js";
+
+export const level51 = new Level({
+    size: [800, 1200],
+    objects: [
+        new Goal({ pos: [400, 1160], size: [40, 40], color: "#eee" }),
+        new Player({ pos: [400, 1160], size: [40, 40], color: "#eee" }),
         
     ],
 });
@@ -1094,7 +1608,7 @@ export class Player extends Box {
             {
                 pos: options.pos,
                 size: options.size,
-                color: "red",
+                color: options.color || "red",
                 grav: 0.004,
                 friction: 0.2,
             },
@@ -1281,6 +1795,36 @@ import { level18 } from "./levels/level18.js";
 import { level19 } from "./levels/level19.js";
 import { level20 } from "./levels/level20.js";
 import { level21 } from "./levels/level21.js";
+import { level22 } from "./levels/level22.js";
+import { level23 } from "./levels/level23.js";
+import { level24 } from "./levels/level24.js";
+import { level25 } from "./levels/level25.js";
+import { level26 } from "./levels/level26.js";
+import { level27 } from "./levels/level27.js";
+import { level28 } from "./levels/level28.js";
+import { level29 } from "./levels/level29.js";
+import { level30 } from "./levels/level30.js";
+import { level32 } from "./levels/level32.js";
+import { level33 } from "./levels/level33.js";
+import { level31 } from "./levels/level31.js";
+import { level34 } from "./levels/level34.js";
+import { level35 } from "./levels/level35.js";
+import { level36 } from "./levels/level36.js";
+import { level37 } from "./levels/level37.js";
+import { level38 } from "./levels/level38.js";
+import { level39 } from "./levels/level39.js";
+import { level40 } from "./levels/level40.js";
+import { level51 } from "./levels/level51.js";
+import { level41 } from "./levels/level41.js";
+import { level42 } from "./levels/level42.js";
+import { level43 } from "./levels/level43.js";
+import { level44 } from "./levels/level44.js";
+import { level45 } from "./levels/level45.js";
+import { level46 } from "./levels/level46.js";
+import { level47 } from "./levels/level47.js";
+import { level48 } from "./levels/level48.js";
+import { level49 } from "./levels/level49.js";
+import { level50 } from "./levels/level50.js";
 
 const levelCount = document.getElementById("levelCount");
 
@@ -1323,9 +1867,13 @@ export class Game {
     }
 }
 
-export const game = new Game([level1, level2, level3, level4, level5, level6, level7, 
-        level8, level9, level10, level11, level12, level13, level14, level15, level16, 
-         level17, level18, level19,level20, level21]);
+export const game = new Game([
+        level1,  level2, level3, level4, level5, level6, level7, level8, level9, 
+        level10, level11, level12, level13, level14, level15, level16, level17, level18, level19,
+        level20, level21, level22, level23, level24, level25, level26, level27, level28, level29, 
+        level30, level31, level32, level33, level34, level35, level36, level37, level38, level39, 
+        level40, level41, level42, level43, level44, level45,level46, level47, level48, level49, 
+        level50, level51]);
 const infoElement = document.getElementById("info");
 
 export function hideInfo() {
@@ -1516,6 +2064,243 @@ export class Timer {
 export function minmax(val, min, max) {
     return Math.max(min, Math.min(max, val));
 }
+body {
+    background-color: #252526;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    background-color: darkred;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: auto;
+}
+
+.answer {
+    background-color: darkgoldenrod;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100%;
+    text-align: none;
+}
+
+.answer:hover {
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#finish {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: darkred;
+    font-size: xx-large;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+}
+
+#linkh {
+    text-decoration: underline;
+    color: white;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <table class="quiz">
+        <tr>
+            <td class="question">Was ist die Hauptstadt von Spanien?</td>
+        </tr>
+    </table>
+
+    <table class="quiz">
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">Berlin</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz1.html">Madrid</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">Barcelona</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">Rom</a></td>
+        </tr>
+    </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <table class="quiz">
+        <tr>
+            <td class="question">Wie groß ist Pi ungefähr</td>
+        </tr>
+    </table>
+
+    <table class="quiz">
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">3.14187</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">3.14123</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">3.14149</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz2.html">3.14159</a></td>
+        </tr>
+    </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <table class="quiz">
+        <tr>
+            <td class="question"><a class="link" href="https://www.youtube.com/channel/UCls1hOj_UaT9Kl-8V22ylag">Wie viele Abonnenten hat MoinJulian am 10.03.2022 ?</a></td>
+        </tr>
+    </table>
+
+    <table class="quiz">
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">10</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">11</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">12</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz3.html">13</a></td>
+        </tr>
+    </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <table class="quiz">
+        <tr>
+            <td class="question">Was ist die 3 Wurzel aus 27^3?</td>
+        </tr>
+    </table>
+
+    <table class="quiz">
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">420,88834</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">420,88836</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">420,88837</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quizf.html">420,88835</a></td>
+        </tr>
+    </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <table class="quiz">
+        <tr>
+            <td class="question">Was ist die 3 Wurzel aus 27^3?</td>
+        </tr>
+    </table>
+
+    <table class="quiz">
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">420,88834</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">420,88836</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quiz.html">420,88837</a></td>
+        </tr>
+        <tr>
+            <td class="answer"><a class="link" href="quizf.html">420,88835</a></td>
+        </tr>
+    </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <a id="linkh" href="../index.html">Hauptseite</a>
+    <table class="quiz">
+        <tr>
+            <td id="finish">Du hast es geschafft!</td>
+        </tr>
+    </table>
+</body>
+</html>
 export let array = [];
 
 export function resetArray() {
@@ -1638,6 +2423,37 @@ export function addCells() {
 export function focusFirstCell() {
     $(`.cell`)[0].focus();
 }
+import { resetArray } from "./arraymethods.js";
+import { toggleSolve } from "./solver.js";
+
+export let delay = 10;
+
+export function enableControls() {
+    $("#clearBtn").click(clearSudoku);
+    $("#solveBtn").click(toggleSolve);
+    // $("#fasterBtn").click(decreaseDelay);
+    // $("#slowerBtn").click(increaseDelay);
+}
+
+// function decreaseDelay() {
+//     if (delay < 10) {
+//         delay = 0;
+//         $("#fasterBtn").prop("disabled", true);
+//     } else {
+//         delay /= 2;
+//     }
+// }
+
+// function increaseDelay() {
+//     delay == 0 ? (delay = 10) : (delay *= 2);
+//     $("#fasterBtn").prop("disabled", false);
+// }
+
+function clearSudoku() {
+    $(".cell").val("").removeClass("fixed");
+    $("#info").text("");
+    resetArray();
+}
 import {
     hasContradiction,
     getUnsolvedPosition,
@@ -1709,10 +2525,18 @@ $(() => {
     focusFirstCell();
     enableControls();
 });
+export function sleep(duration) {
+    return new Promise((res) => setTimeout(res, duration));
+}
 * {
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --main-color: darkred;
+    --main-color-light: rgba(0, 128, 128, 0.8);
 }
 
 .link {
@@ -1726,7 +2550,7 @@ $(() => {
 }
 
 .title {
-    color: white;
+    color: darkred;
     text-align: center;
     font-size: 40px;
     margin-top: 10%;
@@ -1765,11 +2589,11 @@ $(() => {
 }
 
 .playerX {
-    color: #00ff00;
+    color: #006900;
 }
 
 .playerO {
-    color: #1900fc;
+    color: #070049;
 }
 
 .controls {
@@ -1783,7 +2607,6 @@ $(() => {
 .controls button {
     color: white;
     padding: 8px;
-    border-radius: 8px;
     border: none;
     font-size: 20px;
     margin-left: 1em;
@@ -1795,7 +2618,10 @@ $(() => {
 }
 
 #reset {
-    background-color: #ff0000;
+    background: linear-gradient(
+                var(--main-color),
+                var(--main-color-light)
+    );;
 }
 window.addEventListener('DOMContentLoaded', () => {
     const tiles = Array.from(document.querySelectorAll('.tile'));
@@ -1938,22 +2764,22 @@ window.addEventListener('DOMContentLoaded', () => {
     <main id ="stage">
         <div id="cube">
             <div style="--color: green" class="face front">
-                <div class="faceContent"></div>
+                <div class="faceContent">A</div>
             </div>
             <div style="--color: blue" class="face back">
-                <div class="faceContent"></div>  
+                <div class="faceContent">B</div>  
             </div>
             <div style="--color: white" class="face top">
-                <div class="faceContent"></div> 
+                <div class="faceContent">C</div> 
             </div>
             <div style="--color: yellow" class="face bottom">
-                <div class="faceContent"></div>
+                <div class="faceContent">D</div>
             </div>
             <div style="--color: red" class="face left">
-                <div class="faceContent"></div> 
+                <div class="faceContent">E</div> 
             </div>
             <div style="--color: orange" class="face right">
-                <div class="faceContent"></div>
+                <div class="faceContent">F</div>
             </div>
         </div>
     </main>
@@ -1990,6 +2816,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <br>
     <a class="link" href="tictactoe.html"> Tic Tac Toe</a>
     <br>
+    <a class="link" href="./quiz/quiz.html">Qiuz</a>
     <!--Text-->
     <p class="text">Oben seht ihr alle meine fertigen Projekte!
         <br>Wenn ihr auf die Überschrift klickt kommt ihr zu meinem YouTube Kanal.
@@ -2000,29 +2827,29 @@ window.addEventListener('DOMContentLoaded', () => {
 </body>
 
 </html>
-<p>Hier könnt ihr ein Jump and Run Spiel spielen!</p>
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
-            <title>Jump and Run</title>
-            <link rel="stylesheet" href="./css/style.css" />
-        </head>
-        <body>
-            <br>
-            <a id="link" href="index.html">Hauptseite</a>
-            <main>
-                <canvas id="canvas" width="800" height="600"></canvas>
-                <small id="levelCount"></small>
-                <section id="info"></section>
-            </main>
+Jump and Run Level verändern
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
+        <title>Jump and Run</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <br>
+        <a id="link" href="index.html">Hauptseite</a>
+        <main>
+            <canvas id="canvas" width="800" height="600"></canvas>
+            <small id="levelCount"></small>
+            <section id="info"></section>
+        </main>
     
-            <script src="./jumpandrunjs/main.js" type="module"></script>
-        </body>
-    </html>
-    {
+        <script src="./jumpandrunjs/main.js" type="module"></script>
+    </body>
+</html>
+{
     "theme_color" : "#252526",
     "background_color" : "#252526",
     "display" : "fullscreen",
@@ -2031,7 +2858,13 @@ window.addEventListener('DOMContentLoaded', () => {
     "name" : "MoinJulian",
     "short_name" : "MoinJulian"
     }
-    <!DOCTYPE html>
+#MoinJulian Website
+
+<--
+Dies ist die offiziele Website von MoinJulian 
+YouTube Kanal: https://youtube.com/channel/UCls1hOj_UaT9Kl-8V22ylag
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -2222,9 +3055,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <p id="taschenrechner">Hier habt ihr auch noch einen Taschenrechner</p>
     <a href="index.html">Hauptseite</a>
     <br>
-    <div id="resultArea">
-
-    </div>
+    <div id="resultArea"></div>
 
     <table>
         <tr>
@@ -2269,6 +3100,7 @@ window.addEventListener('DOMContentLoaded', () => {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./img/moinjulian.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./tictactoe/tictactoe.css">
@@ -2317,6 +3149,12 @@ window.addEventListener('DOMContentLoaded', () => {
     <link rel="manifest" href="manifest.json">
 
     <style>
+
+        :root {
+            --main-color: darkred;
+            --main-color-light: rgba(0, 128, 128, 0.8);
+        }
+
         .background-dark {
             background-color: #262626;
         }
@@ -2329,7 +3167,7 @@ window.addEventListener('DOMContentLoaded', () => {
         a {
             color: white;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: flex-start;
         }
 
@@ -2347,13 +3185,20 @@ window.addEventListener('DOMContentLoaded', () => {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 10vw;
+            width: 15vw;
             height: 5vh;
-            background-color: darkred;
+            background: linear-gradient(
+                var(--main-color),
+                var(--main-color-light)
+    );;
         }
 
         .start:hover {
             cursor: pointer;
+        }
+
+        .space {
+            margin-inline-start: 50px;
         }
 
     </style>
@@ -2410,11 +3255,7 @@ window.addEventListener('DOMContentLoaded', () => {
         <table>
             <tr>
                 <td onclick="startTimer()" class="start" id="start">Start</td>
-                <td><table>
-                   <td></td>
-                   <td></td>
-                   <td></td> 
-                </table></td>
+                <td><table class="space"></table></td>
                 <td onclick="stopTimer()" class="start" id="stop">Stop</td>
             </tr>       
         </table>
