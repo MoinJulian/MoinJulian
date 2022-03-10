@@ -12,6 +12,6 @@ export const level5 = new Level({
         new Rectangle({ pos: [630, 250], size: [90, 10], color:"blue"}), //Rechteck unter dem Goal
         new Rectangle({ pos: [550, 50], size: [10, 500], color:"gray"}),
         new Box({pos: [550, 550], size: [10, 60], color: "gray"}),
-        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"})
+        new Rectangle({pos: [560, 350], size: [40,10], color:"blue"}),
     ],
 });

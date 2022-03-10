@@ -10,6 +10,9 @@ body {
 }
 
 #link {
+    margin-top: 0vh;
+    display: flex;
+    justify-content: center;
     color: white;
 }
 
