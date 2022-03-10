@@ -12,8 +12,11 @@ body {
         var(--main-color),
         var(--main-color-light)
     );
+    color: white;
 }
 
 #eingabe {
     border: 1px;
+    color: white;
+    background-color: rgb(37, 37, 38);
 }
