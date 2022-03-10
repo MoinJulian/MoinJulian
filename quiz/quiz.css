@@ -36,10 +36,10 @@ body {
 .link {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-decoration: none;
 }
 
 #finish {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: darkred;
     font-size: xx-large;
     width: auto;
