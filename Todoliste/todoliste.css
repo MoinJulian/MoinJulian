@@ -3,6 +3,10 @@
     --main-color-light: rgba(0, 128, 128, 0.8);
 }
 
+body {
+    background-color:rgb(37, 37, 38);
+}
+
 #speichern {
     background: linear-gradient(
         var(--main-color),
