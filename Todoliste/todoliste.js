@@ -1,4 +1,4 @@
-let operation = 0;
+let operation = 5;
 
 function Todo(operation) {
     document.getElementById("eingabe").innerHTML = operation;
