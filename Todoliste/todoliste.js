@@ -5,4 +5,3 @@ function Todo(operation) {
 }
 
 console.log(operation);
-
