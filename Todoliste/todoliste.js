@@ -1,12 +1,12 @@
-let save = document.getElementById('save');
+let operation = 1;
+let todo = 1;
 
-save.addEventListener('click', todo);
+    function ToDo() {
+        todo = document.formular.operation.value;
 
-function todo () {
-    let todo = document.getElementById('todo');
-    let eingabe = document.nodeValue('todo');
+        console.log(todo);
+    }
 
-    console.log(eingabe);
-   
-}
+console.log(operation);
+console.log(todo);
 
