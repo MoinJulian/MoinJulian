@@ -1,8 +1,12 @@
-let operation = 0;
+let save = document.getElementById('save');
 
-function Todo(operation) {
-    document.getElementById("eingabe").innerHTML = operation;
+save.addEventListener('click', todo);
+
+function todo () {
+    let todo = document.getElementById('todo');
+    let eingabe = document.nodeValue('todo');
+
+    console.log(eingabe);
+   
 }
-
-console.log(operation);
 

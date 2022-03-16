@@ -36,6 +36,23 @@
         <br>Ich mache jede Woche Samstag um 18 Uhr ein Video auf meinem Kanal <a class="kanal" href="https://www.youtube.com/channel/UCls1hOj_UaT9Kl-8V22ylag">MoinJulian</a>
         <br><b class="fett">Diese Website ist stets unter Bearbeitung.</b>
     </p>
+    <p>Drücken sie wenn sie den Zeitpunkt des letzten Upadtes sehen wollen!</p>
+    <p id="Absatz"></p>
+<button id="Eingabe">Los!</button>
+
+<script>
+
+  var elem = document.getElementById('Eingabe');
+  elem.addEventListener('click', erzeugeZeitStempel);
+ 
+  function erzeugeZeitStempel() {
+    var Zeitstempeltext = document.createTextNode(document.lastModified);
+    var TextZuvor = document.createTextNode('Datum des letzten Updates: ');
+    document.getElementById('Absatz').appendChild(TextZuvor);
+    document.getElementById('Absatz').appendChild(Zeitstempeltext);
+  }
+</script>
+
 </body>
 
 </html>
