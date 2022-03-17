@@ -38,23 +38,38 @@
         <br>Ich mache jede Woche Samstag um 18 Uhr ein Video auf meinem Kanal <a class="kanal" href="https://www.youtube.com/channel/UCls1hOj_UaT9Kl-8V22ylag">MoinJulian</a>
         <br><b class="fett">Diese Website ist stets unter Bearbeitung.</b>
     </p>
-    <p>Drücken sie wenn sie den Zeitpunkt des letzten Upadtes sehen wollen!</p>
-    <p id="Absatz"></p>
-<button id="Eingabe">Los!</button>
+    <details>
+        <summary>Aktuelle Uhrzeit!</summary>
+        <p>Drücken Sie wenn Sie die Aktuelle Zeit sehen wollen!</p>
+        <p id="Absatz"></p>
+        <button id="eingabe">Los!</button>
 
-<script>
+        <script>
 
-  var elem = document.getElementById('Eingabe');
-  elem.addEventListener('click', erzeugeZeitStempel);
- 
-  function erzeugeZeitStempel() {
-    var Zeitstempeltext = document.createTextNode(document.lastModified);
-    var TextZuvor = document.createTextNode('Datum des letzten Updates: ');
-    document.getElementById('Absatz').appendChild(TextZuvor);
-    document.getElementById('Absatz').appendChild(Zeitstempeltext);
-  }
-</script>
-
+        var elem = document.getElementById('eingabe');
+        elem.addEventListener('click', erzeugeZeitStempel);
+        
+        function erzeugeZeitStempel() {
+            var Zeitstempeltext = document.createTextNode(document.lastModified);
+            var TextZuvor = document.createTextNode('Momentanes Datum: ');
+            document.getElementById('Absatz').appendChild(TextZuvor);
+            document.getElementById('Absatz').appendChild(Zeitstempeltext);
+        }
+        </script>
+        <style>
+            :root {
+                --main-color: darkred;
+                --main-color-light: rgba(0, 128, 128, 0.8);
+            }
+            #eingabe{
+                background: linear-gradient(
+                    var(--main-color),
+                    var(--main-color-light)
+                );
+                color: white;
+            }
+        </style>
+    </details>
 </body>
 
 </html>
