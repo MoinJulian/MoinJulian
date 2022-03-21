@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(37, 37, 38);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+}
+
+.background {
+    background-color: #252526;
+}
+
+.link {
+    display: flex;
+    margin-left: 0vw;
+    align-items: center;
+    line-height: 25px;
+    color: white;
+}
+
+.fett {
+    font-size: 20px;
+    font-style: oblique;
+}
+
+h1 {
+    color: red;
+    font-size: 200%;
+}
+
+
+a#YouTube {
+    text-decoration: none;
+}
+
+.kanal {
+    color: white;
+}

@@ -1,0 +1,37 @@
+:root {
+    --main-color: darkred;
+    --main-color-light: rgba(0, 128, 128, 0.8);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    align-items: center;
+    background-color:rgb(37, 37, 38);
+}
+
+#speichern {
+    background: linear-gradient(
+        var(--main-color),
+        var(--main-color-light)
+    );
+    color: white;
+    border: 0px;
+    size: 25%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    size: 25%;
+}
+
+#eingabe {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    size: 25%;
+    border: 5px;
+    color: black;
+    background-color: white;
+    border-color: white;
+}

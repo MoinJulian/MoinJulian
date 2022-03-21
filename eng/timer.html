@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./icon/favicon-32x32-seochecker-manifest-620.jpeg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Minute Timer</title>
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+
+        :root {
+            --main-color: darkred;
+            --main-color-light: rgba(0, 128, 128, 0.8);
+        }
+
+        .background-dark {
+            background-color: #262626;
+        }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+        
+        a {
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .margin-top {
+            margin-top: 100px;
+        }
+        
+        .timer {
+            font-size: 30px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .start {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15vw;
+            height: 5vh;
+            background: linear-gradient(
+                var(--main-color),
+                var(--main-color-light)
+    );;
+        }
+
+        .start:hover {
+            cursor: pointer;
+        }
+
+        .space {
+            margin-inline-start: 50px;
+        }
+
+    </style>
+
+    <script>
+        let alarm = new Audio('./alarm/Eieruhr_alarm.mp3');
+        let timerStarted = false;
+        let timerlenght = 5;
+
+        function stopTimer() {
+            if (timerStarted) {
+                let stopTimer = location.reload();
+            }
+        }
+
+        function startTimer() {
+            if (!timerStarted) {
+                let startTime = new Date().getTime();
+                let fiveMinutes = 1000 * 60 * timerlenght;
+                let endTime = startTime + fiveMinutes;
+
+
+                setInterval(function() {
+                    let timeLeft = endTime - new Date().getTime();
+
+
+                    if (timeLeft > 0) {
+                        let minutes = timeLeft / (1000 * 60);
+                        minutes = Math.floor(minutes);
+                        let seconds = (timeLeft / 1000) % 60;
+                        seconds = Math.round(seconds);
+                        seconds = ('0' + seconds).slice(-2);
+                        let text = minutes  +  ' : '  +  seconds;
+                        timer.innerHTML = text;
+                    } else {
+                        alarm.play();
+                        timer.innerHTML = '00 : 00';
+                    }
+                }, 1000);
+                timerStarted = true;
+            }
+        }
+    </script>
+
+</head>
+
+<body class="background-dark">
+    <a href="./eng-index.html">Main Page</a>
+
+    <div class="center margin-top timer" id="timer">5 : 00</div>
+
+
+    <div class="center margin-top timer">
+        <table>
+            <tr>
+                <td onclick="startTimer()" class="start" id="start">Start</td>
+                <td><table class="space"></table></td>
+                <td onclick="stopTimer()" class="start" id="stop">Stop</td>
+            </tr>       
+        </table>
+    </div>
+
+</body>
+
+</html>
