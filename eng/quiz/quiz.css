@@ -1,0 +1,58 @@
+body {
+    background-color: #252526;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    background-color: darkred;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: auto;
+}
+
+.answer {
+    background-color: darkgoldenrod;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100%;
+    text-align: none;
+}
+
+.answer:hover {
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#finish {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: darkred;
+    font-size: xx-large;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+}
+
+#linkh {
+    text-decoration: underline;
+    color: white;
+}
