@@ -40,6 +40,8 @@ a#YouTube {
 
 #eng {
     color: firebrick;
+    line-height: 50px;
+    font-size: 102%;
 }
 
 #line {
