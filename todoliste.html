@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./todoliste/todoliste.css">
-    <link rel="icon" href="./icon/favicon-32x32-seochecker-manifest-620.jpeg" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./todoliste/todoliste.js"></script>
-    <title>Todo Liste</title>
-</head>
-<body>
-    <main>
-        <div> <!--Eingabe-->
-            <input type="text" id="todo">
-        </div>
-
-        <div  id="speichern"> <!--Abschicken-->
-            <table>
-                <td>
-                    <tr id="save"> Speichern</tr>
-                </td>
-            </table>
-        </div>
-
-        <div> <!--Liste-->
-
-        </div>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ToDo App</title>
+        <link rel="stylesheet" href="./todoliste/todoliste.css" />
+        <script src="./todoliste/todoliste.js" defer></script>
+    </head>
+    <body>
+        <h1>Todos</h1>
+        <form id="form">
+            <input
+                type="text"
+                id="input"
+                class="input"
+                placeholder="Enter your todo"
+                autocomplete="off"
+            />
+            <ul class="todos" id="todos"></ul>
+        </form>
+        <small
+            >Links click um abgeschlossen einzustellen / auszuschalten. <br />Rechts click um das Todo zu löschen!</small
+        >
+    </body>
 </html>
