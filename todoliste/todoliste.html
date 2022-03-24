@@ -4,17 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ToDo App</title>
-        <link rel="stylesheet" href="./todoliste/todoliste.css" />
-        <script src="./todoliste/todoliste.js" defer></script>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="todoliste.css" />
+        <script src="todoliste.js" defer></script>
     </head>
     <body>
+        <a href="../index.html" class="link"></a>
         <h1>Todos</h1>
         <form id="form">
             <input
                 type="text"
                 id="input"
                 class="input"
-                placeholder="Enter your todo"
+                placeholder="Todo eingeben"
                 autocomplete="off"
             />
             <ul class="todos" id="todos"></ul>
