@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-    color: rgb(179, 131, 226);
+    color: red;
     font-size: 10rem;
     text-align: center;
     opacity: 0.4;
