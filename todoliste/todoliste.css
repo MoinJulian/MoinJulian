@@ -17,7 +17,7 @@ body {
 
 h1 {
     color: red;
-    font-size: 10rem;
+    font-size: 100%;
     text-align: center;
     opacity: 1;
 }
@@ -51,7 +51,7 @@ form {
 .todos li {
     border-top: 1px solid #e5e5e5;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 15%;
     padding: 1rem 2rem;
 }
 
