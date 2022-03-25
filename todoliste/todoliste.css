@@ -17,7 +17,7 @@ body {
 
 h1 {
     color: red;
-    font-size: 100%;
+    font-size: 200%;
     text-align: center;
     opacity: 1;
 }
@@ -29,16 +29,17 @@ form {
 }
 
 .input {
+    background-color: #303030;
     border: none;
-    color: #eee;
-    font-size: 2rem;
+    color: #e5e5e5;
+    font-size: 200%;
     padding: 1rem 2rem;
     display: block;
     width: 100%;
 }
 
 .input::placeholder {
-    color: #d5d5d5;
+    color: #a3a3a3;
 }
 
 .todos {
@@ -51,7 +52,7 @@ form {
 .todos li {
     border-top: 1px solid #e5e5e5;
     cursor: pointer;
-    font-size: 15%;
+    font-size: 200%;
     padding: 1rem 2rem;
 }
 
@@ -64,4 +65,10 @@ small {
     color: #b5b5b5;
     margin-top: 3rem;
     text-align: center;
+}
+
+#link {
+    display: flex;
+    margin-left: 5vw;
+    margin-right:100vw;
 }
