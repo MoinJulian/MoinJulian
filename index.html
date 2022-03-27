@@ -69,32 +69,8 @@
         <table>
             <td id="eingabe">Los!</td>
         </table>
-
-        <script>
-
-        var elem = document.getElementById('eingabe');
-        elem.addEventListener('click', erzeugeZeitStempel);
-        
-        function erzeugeZeitStempel() {
-            var Zeitstempeltext = document.createTextNode(document.lastModified);
-            var TextZuvor = document.createTextNode('Momentanes Datum: ');
-            document.getElementById('Absatz').appendChild(TextZuvor);
-            document.getElementById('Absatz').appendChild(Zeitstempeltext);
-        }
-        </script>
-        <style>
-            :root {
-                --main-color: darkred;
-                --main-color-light: rgba(0, 128, 128, 0.8);
-            }
-            #eingabe{
-                background: linear-gradient(
-                    var(--main-color),
-                    var(--main-color-light)
-                );
-                color: white;
-            }
-        </style>
+        <script src="./index/time.js"></script>
+        <link rel="stylesheet" href="./index/time.css">
     </details>
 </body>
 
