@@ -2,7 +2,7 @@
 	"short_name": "MoinJulian",
 	"name": "MoinJulian",
 	"lang": "de",
-	"start_url": "https://moinjulian.netlify.app/index.html",
+	"start_url": "./de/index.html",
 	"background_color": "#252526",
 	"theme_color": "#252526",
 	"dir": "auto",
