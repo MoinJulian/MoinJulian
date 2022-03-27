@@ -86,4 +86,7 @@ addEventListener("keydown", (e) => {
       deleteAll();
       break;
   }
+  addEventListener("submit", () => {
+    calculatResult();
+  })
 });
