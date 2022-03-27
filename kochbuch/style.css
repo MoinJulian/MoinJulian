@@ -7,12 +7,10 @@ body {
     color: white;
     text-decoration: none;
     text-decoration-color: #e6e6e6;
-    position: fixed;
 }
 
 a {
     text-decoration: none;
-    position: fixed;
 }
 
 #rezepte_div {
@@ -24,7 +22,6 @@ a {
     height: 40vh;
     margin-left: 25vw;
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
 }
 
 #pan_cake_img {
@@ -33,7 +30,6 @@ a {
     margin-left: -60%;
     width: 80%;
     height: 30%;
-    position: fixed;
 }
 
 #pan_cake {
@@ -43,7 +39,6 @@ a {
     margin-top: 60%;
     margin-left: 30%;
     font-size: 200%;
-    position: fixed;
 }
 
 #steak {
@@ -53,7 +48,6 @@ a {
     margin-top: 60%;
     margin-left: 35%;
     font-size: 200%;
-    position: fixed;
 }
 
 #steak_img {
@@ -62,13 +56,11 @@ a {
     margin-left: -55%;
     width: 80%;
     height: 30%;
-    position: fixed;
 }
 
 .backlink {
     text-decoration: underline;
     color: white;
-    position: fixed;
 }
 
 #h2_entrecote {
@@ -77,19 +69,16 @@ a {
     margin-right: 50%;
     margin-top: 5%;
     color: burlywood;
-    position: fixed;
 }
 
 #div_p {
     margin-left: 5%;
-    position: fixed;
 }
 
 .zubereitung {
     display: flex;
     margin: 1px;
     margin-left: 20px;
-    position: fixed;
 }
 
 .bold {
@@ -99,12 +88,10 @@ a {
     text-decoration: underline;
     margin-left: 0%;
     margin-left: 10px;
-    position: fixed;
 }
 
 .absätze {
     font-size: 105%;
     text-decoration: underline;
     font-weight: bolder;
-    position: fixed;
 }
