@@ -39,6 +39,7 @@ a#YouTube {
 }
 
 .sprache {
+    line-height: 15px;
     color: firebrick;
     font-size: 150%;
 }
