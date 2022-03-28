@@ -27,7 +27,8 @@ a {
 
 #pan_cake_img {
     display: flex;
-    size: 50px 25px;
+    width: 20px;
+    height: 40px;
     justify-content: flex-start;
     align-items: flex-start;
 }
