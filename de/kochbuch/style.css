@@ -27,10 +27,10 @@ a {
 
 #pan_cake_img {
     display: flex;
-    margin-top:10%;
-    margin-left: -60%;
-    width: 80%;
-    height: 30%;
+    margin-top:10vh;
+    margin-left: -60vw;
+    width: 80vw;
+    height: 30vh;
 }
 
 #pan_cake {
