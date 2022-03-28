@@ -27,10 +27,7 @@ a {
 
 #pan_cake_img {
     display: flex;
-    margin-top:1vh;
-    margin-left: 1vw;
-    width: 32vw;
-    height: 9vh;
+    
     justify-content: center;
     align-items: center;
 }
