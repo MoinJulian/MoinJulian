@@ -80,6 +80,10 @@ let charArr = [
   "Ѱ",
   "Ѿ",
   "Ц",
+  "ä",
+  "ü",
+  "Ä",
+  "ö",
 ];
 
 let maxCharCount = 300;
