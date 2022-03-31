@@ -43,3 +43,7 @@ canvas {
 .toolbox > *:last-child {
     margin-left: auto;
 }
+
+#clear {
+    width: 10rem;
+}
