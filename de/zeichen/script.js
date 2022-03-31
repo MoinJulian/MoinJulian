@@ -50,12 +50,12 @@ function drawLine(x1, y1, x2, y2) {
     ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
     ctx.strokeStyle = color;
-    ctx.lineWidth = size * 2;
+    ctx.lineWidth = size + 1;
     ctx.stroke();
 }
 
 increaseBtn.addEventListener("click", () => {
-    size += 5;
+    size += 1;
 
     if (size > 50) {
         size = 50;
@@ -65,10 +65,10 @@ increaseBtn.addEventListener("click", () => {
 });
 
 decreaseBtn.addEventListener("click", () => {
-    size -= 5;
+    size -= 1;
 
-    if (size < 5) {
-        size = 5;
+    if (size < 1) {
+        size = 1;
     }
 
     updateSizeOnScreen();
