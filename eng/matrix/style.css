@@ -1,0 +1,15 @@
+body {
+    overflow: hidden;
+    font-size: 1vh;
+}
+
+#hidden {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+
+#canvas {
+    width: 100vh;
+    height: 90vh;
+}

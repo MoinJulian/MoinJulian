@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: white;
+}
+
+:root {
+    --size: min(300px, 50vw);
+    --size-half: calc(0.5 * var(--size));
+    --size-half-negative: calc(-0.5 * var(--size));
+    --border-radius: calc(0.1 * var(--size));
+    --shadow-radius: calc(0.1 * var(--size));
+    --perspective: calc(2.5 * var(--size));
+    --font-size: calc(0.9 * var(--size));
+    --rotation-speed: 50s;
+}
+
+body {
+    background-color: #252526;
+    color: white;
+}
+
+#stage {
+    min-width: 100vw;
+    min-height: 100vh;
+    perspective: var(--perspective);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+#cube {
+    transform-style: inherit;
+    position: relative;
+    animation: cube-rotation var(--rotation-speed) linear infinite;
+}
+
+@keyframes cube-rotation {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateX(1080deg) rotateY(720deg) rotateZ(360deg);
+    }
+}
+
+.face {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    background: gray;
+    color: gray;
+    font-size: var(--font-size);
+    transition: all 200ms ease;
+}
+
+.faceContent {
+    width: 90%;
+    height: 90%;
+    background: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+}
+
+.face:hover {
+    background: white;
+    box-shadow: 0px 0px var(--shadow-radius) white;
+    opacity: 1;
+    color: black;
+}
+
+.face.front {
+    transform: translateX(-50%) translateY(-50%)
+    translateZ(var(--size-half));
+}
+
+.face.back {
+    transform: translateX(-50%) translateY(-50%)
+    translateZ(var(--size-half-negative)) scaleX(-1);
+}
+
+
+.face.left {
+    transform:translateX(calc(-50% + var(--size-half-negative)))
+    translateY(-50%) rotateY(-90deg);
+}
+
+.face.right {
+    transform:translateX(calc(-50% + var(--size-half)))
+    translateY(-50%) rotateY(90deg);
+}
+
+.face.top {
+    transform: translateX(-50%) translateY(calc(-50% + var(--size-half-negative)))
+    rotateX(90deg);
+}
+
+.face.bottom {
+    transform: translateX(-50%) translateY(calc(-50% + var(--size-half)))
+    rotateX(-90deg);
+}
+

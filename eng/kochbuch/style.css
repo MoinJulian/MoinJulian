@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #252526;
+    color: white;
+    text-decoration: none;
+    text-decoration-color: #e6e6e6;
+    resize: initial;
+}
+
+a {
+    text-decoration: none;
+}
+
+#rezepte_div {
+    margin-top: 5%;
+    background-color: #e6e6e6;
+    color: white;
+    display: flex;
+    width: 50vw;
+    height: 40vh;
+    margin-left: 25vw;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+#pan_cake_img {
+    display: flex;
+    width: 100px;
+    height: 200px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 20vw;
+}
+
+#pan_cake {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    margin-top: 60%;
+    margin-left: 30%;
+    font-size: 200%;
+}
+
+#steak {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    margin-top: 60%;
+    margin-left: 35%;
+    font-size: 200%;
+}
+
+#steak_img {
+    display: flex;
+    margin-top:10%;
+    margin-left: -55%;
+    width: 80%;
+    height: 30%;
+}
+
+.backlink {
+    text-decoration: underline;
+    color: white;
+}
+
+#h2_entrecote {
+    display: flex;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 5%;
+    color: burlywood;
+}
+
+#div_p {
+    margin-left: 5%;
+}
+
+.zubereitung {
+    display: flex;
+    margin: 1px;
+    margin-left: 20px;
+}
+
+.bold {
+    display: flex;
+    margin: 1px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 0%;
+    margin-left: 10px;
+}
+
+.absätze {
+    font-size: 105%;
+    text-decoration: underline;
+    font-weight: bolder;
+}
