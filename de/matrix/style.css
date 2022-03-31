@@ -1,3 +1,9 @@
 body {
     overflow: hidden;
 }
+
+#hidden {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow: hidden;
+}
