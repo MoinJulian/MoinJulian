@@ -20,8 +20,8 @@ canvas {
 }
 
 .toolbox {
-    background-color: #252526;
-    border: 1px solid #252526;   
+    background-color: #fff;
+    border: 1px solid #fff;   
     display: flex;
     padding: 1rem;
     width: 804px;
