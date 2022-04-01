@@ -27,11 +27,12 @@ a {
 
 #pan_cake_img {
     display: flex;
-    width: 100px;
-    height: 200px;
+    width: 40vw;
+    height: 15vh;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-right: 20vw;
+    margin-top: 2vw;
+    margin-left: -31vw;
 }
 
 #pan_cake {
