@@ -124,16 +124,15 @@ export class Game {
         this.currentLevel.addControls();
         levelCount.innerText = "Level " + this.currentLevelIndex;
         writeInfo(
-            "Drücken sie Space um das Spiel zu starten.<br>" +
-                "Drücken sie 'r' um das Level neu zu starten.<br>" +
-                "Wenn sie das schwarze Ziel errichen kommen sie in nächste Level!"
+            "Press Space to start the game or to pause.<br>" +
+                "Press 'r' to restart the current level.<br>" 
         );
     }
 
     switchToNextLevel() {
         this.currentLevelIndex++;
         if (this.currentLevelIndex > this.levelList.length) {
-            writeInfo("(:<br>" + "Sie haben das Spiel gewonnen!<br>" + "(:");
+            writeInfo("(:<br>" + "You won the game!<br>" + "(:");
             return;
         }
         levelCount.innerText = "Level " + this.currentLevelIndex;
