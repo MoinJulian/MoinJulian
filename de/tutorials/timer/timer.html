@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        .background-dark {
+            background-color: #262626;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .margin-top {
+            margin-top: 100px;
+        }
+
+        .timer {
+            font-size: 30px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .start {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15vw;
+            height: 5vh;
+        }
+
+        .start:hover {
+            background-color: #242424;
+            cursor: pointer;
+        }
+
+        .space {
+            margin-inline-start: 100px;
+        }
+    </style>
+
+    <script>
+        let alarm = new Audio('alarm.mp3');
+        let timerStarted = false;
+        let timerLenght = 5;
+
+        function stopTimer() {
+            if (timerStarted) {
+                let stopTimer = location.reload();
+            }
+        }
+
+        function startTimer() {
+            if(!timerStarted) {
+                let startTime = new Date().getTime();
+                let Minutes = 1000 * 60 * timerLenght;
+                let endTime = startTime + Minutes;
+
+                setInterval(function() {
+                    let timeLeft = endTime - new Date().getTime();
+
+                    if(timeLeft > 0) {
+                        let minutes = timeLeft / (1000 * 60);
+                        minutes = Math.floor(minutes);
+                        let seconds = (timeLeft / 1000) % 60;
+                        seconds = Math.round(seconds);
+                        seconds = ('0' + seconds).slice(-2);
+                        let text = minutes + ' : ' + seconds;
+                        timer.innerHTML = text;
+                    } else {
+                        alarm.play();
+                        timer.innerHTML = '00 : 00';
+                    }
+                }, 1000);
+                timerStarted = true;
+            }
+        }
+    </script>
+</head>
+<body class="background-dark">
+    <div class="center margin-top timer" id="timer">05:00</div>
+
+    <div class="center margin-top timer">
+        <table>
+            <tr>
+                <td onclick="startTimer()" id="start" class="start">Start</td>
+                <td class="space"></td>
+                <td onclick="stopTimer()" id="stop" class="start">Stop</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
