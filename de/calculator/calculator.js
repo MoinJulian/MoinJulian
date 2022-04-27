@@ -1,12 +1,12 @@
 function appendOperation(operation) {
   document.getElementById("resultArea").innerHTML += operation;
 }
-function calculatResult() {
+function calculatResult() { //berechnet das ergebniss
   let container = document.getElementById("resultArea");
   let result = eval(container.innerHTML);
   container.innerHTML = result;
 }
-function deleteLast() {
+function deleteLast() { //löscht die letzte eingabe
   let container = document.getElementById("resultArea");
   if (container.innerHTML.endsWith(" ")) {
     container.innerHTML = container.innerHTML.slice(0, -3);
@@ -14,8 +14,8 @@ function deleteLast() {
     container.innerHTML = container.innerHTML.slice(0, -1);
   }
 }
-//MoinJulian
-function deleteAll() {
+
+function deleteAll() { //löscht die gesamte eingabe
   let container = document.getElementById("resultArea");
   if (container.innerHTML.endsWith(" ")) {
     container.innerHTML = container.innerHTML.slice(0, -Infinity);
@@ -23,7 +23,7 @@ function deleteAll() {
     container.innerHTML = container.innerHTML.slice(0, -Infinity);
   }
 }
-addEventListener("keydown", (e) => {
+addEventListener("keydown", (e) => { //Tasten überprüfung
   switch (e.key) {
     case "1":
       appendOperation(1);

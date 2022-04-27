@@ -1,13 +1,13 @@
-document.getElementById("celsius-eingabefeld").addEventListener("input", celsiusUmrechnen);
+document.getElementById("celsius-eingabefeld").addEventListener("input", meterUmrechnen);
 document.getElementById("fahrenheit-eingabefeld").addEventListener("input", fahrenheitUmrechnen);
 document.getElementById("kelvin-eingabefeld").addEventListener("input", kelvinUmrechnen);
 
-function celsiusInFahrenheitUmrechnen(celsius) {
-   return celsius * 1.8 + 32;
+function meterInZentimeter(meter) {
+   return meter / 100;
 }
 
-function celsiusInKelvinUmrechnen(celsius) {
-    return celsius + 273.15
+function meterInMillimeter(meter) {
+    return meter / 100 / 10;
 }
 
 function fahrenheitIncelsiusUmrechnen(fahrenheit) {
@@ -26,10 +26,10 @@ function kelvinInFahrenkeitUmrechnen(kelvin) {
     return (kelvin - 273.15) * 1.8 +32;
 }
 
-function celsiusUmrechnen(event) {
-    const celsius = event.target.valueAsNumber;
-    document.getElementById("fahrenheit-eingabefeld").value = celsiusInFahrenheitUmrechnen(celsius);
-    document.getElementById("kelvin-eingabefeld").value = celsiusInKelvinUmrechnen(celsius);
+function meterUmrechnen(event) {
+    const meter = event.target.valueAsNumber;
+    document.getElementById("zentimeter-eingabefeld").value = meterInZentimeter(meter);
+    document.getElementById("kelvin-eingabefeld").value = meterInMillimeter(meter);
 }
 
 function fahrenheitUmrechnen(event) {

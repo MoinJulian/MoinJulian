@@ -1,0 +1,52 @@
+body {
+    background-color: green;
+    width: 100vw;
+    height: 100vh;
+}
+
+#background {
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+#container {
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+#field {
+    color: white;
+    background-color: transparent;
+    border: thin solid 1px white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 50vh;
+    font-size: 3.5vw;
+}
+
+
+ .count {
+    color: white;
+} 
+
+.reach {
+    display: flex;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    text-decoration: solid;
+    font-size: 4vw;
+    color: lightgreen;
+}
+
+th, td { 
+    border: thin solid; 
+}
+
+.count:hover {
+    cursor: pointer;
+}
