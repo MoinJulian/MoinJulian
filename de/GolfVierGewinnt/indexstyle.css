@@ -1,11 +1,3 @@
-body {
-    background-image: url(./img/background2.png);
-    width: auto;
-    height: auto;
-    position: absolute;
-    image-orientation: from-image;
-}
-
 #container {
     background-color: transparent;
     width: 100vw;
@@ -55,6 +47,14 @@ th, td {
     color: aquamarine;
 }
 
+#levels {
+    color: aquamarine;
+}
+
+.non-line {
+    text-decoration: none;
+}
+
 summary {
     position: relative;  
     left: 1vw;
@@ -70,7 +70,7 @@ summary {
     color: white;
     font-size: 1.5vw;
     font-weight: bold; 
-    left: 12.5vw;
+    left: 12vw;
     top:  0vw;
     transition: all 0.5s;
  } 
@@ -78,4 +78,10 @@ summary {
  details[open] summary::after {
   color: red;
   transform: translate(5px,0) rotate(45deg);
+ }
+
+ #indetails {
+     display: flex;
+     margin-left: 2.5vw;
+     position: fixed, static;
  }
