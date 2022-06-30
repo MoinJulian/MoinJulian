@@ -23,6 +23,7 @@ function deleteAll() { //löscht die gesamte eingabe
     container.innerHTML = container.innerHTML.slice(0, -Infinity);
   }
 }
+
 addEventListener("keydown", (e) => { //Tasten überprüfung
   switch (e.key) {
     case "1":
@@ -73,20 +74,21 @@ addEventListener("keydown", (e) => { //Tasten überprüfung
     case "(":
       appendOperation("(");
       break;
+    case "=":
+      calculatResult();
+      break;
     case ")":
       appendOperation(")");
       break;
-    case " ":
+    case "Enter":
       calculatResult();
       break;
-    case "d":
+    case "Backspace":
       deleteLast();
       break;
     case "a":
       deleteAll();
       break;
   }
-  addEventListener("submit", () => {
-    calculatResult();
-  })
 });
+  

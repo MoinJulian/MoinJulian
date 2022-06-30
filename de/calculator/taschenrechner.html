@@ -9,48 +9,59 @@
     <script src="calculator.js"></script>
 </head>
 <body>
-    <p id="taschenrechner">Hier habt ihr auch noch einen Taschenrechner</p>
+    <p class="taschenrechner">Hier habt ihr auch noch einen Taschenrechner</p>
+    <p class="taschenrechner">Ihr müsst die zweite Klammer bei den Funktionen selber setzen.</p>
     <a href="../../index.html">Hauptseite</a>
     <br>
     <div id="resultArea"></div>
-
     <table>
+            <tr>
+                <td class="highlight" onclick="appendOperation('**')">Quadrat</td>
+                <td class="highlight" onclick="appendOperation('Math.sqrt(')">√</td>
+                <td class="highlight" onclick="appendOperation('Math.sin(')">Sinus</td>
+                <td class="highlight" onclick="appendOperation('Math.cos(')">Cosinus</td>
+                <td class="highlight" onclick="appendOperation('Math.tan(')">Tangens</td>
+            </tr>
         <tr>
             <td onclick="appendOperation('(')" class="highlight">(</td>
             <td onclick="appendOperation(')')" class="highlight">)</td>
-            <td onclick="deleteAll()" class="highlight">DEL ALL (a)</td>
-            <td onclick="deleteLast()" class="highlight">DEL (d)</td>
+            <td onclick="deleteLast()" class="highlight">DEL</td>
+            <td class="highlight" onclick="deleteAll()">DEL ALL (a)</td>
+            <td class="highlight" onclick="appendOperation('Math.sinh(')">Sinush</td>
         </tr>
 
         <tr>
-            <td onclick="appendOperation(7)">7</td>
-            <td onclick="appendOperation(8)">8</td>
-            <td onclick="appendOperation(9)">9</td>
+            <td onclick="appendOperation(7)" class="number">7</td>
+            <td onclick="appendOperation(8)" class="number">8</td>
+            <td onclick="appendOperation(9)" class="number">9</td>
             <td onclick="appendOperation(' / ')" class="highlight">/</td>
+            <td class="highlight">Cosinush</td>
         </tr>
 
         <tr>
-            <td onclick="appendOperation(4)">4</td>
-            <td onclick="appendOperation(5)">5</td>
-            <td onclick="appendOperation(6)">6</td>
+            <td onclick="appendOperation(4)" class="number">4</td>
+            <td onclick="appendOperation(5)" class="number">5</td>
+            <td onclick="appendOperation(6)" class="number">6</td>
             <td onclick="appendOperation(' * ')" class="highlight">x</td>
+            <td class="highlight">Tangensh</td>
         </tr>
 
         <tr>
-            <td onclick="appendOperation(1)">1</td>
-            <td onclick="appendOperation(2)">2</td>
-            <td onclick="appendOperation(3)">3</td>
+            <td onclick="appendOperation(1)" class="number">1</td>
+            <td onclick="appendOperation(2)" class="number">2</td>
+            <td onclick="appendOperation(3)" class="number">3</td>
             <td onclick="appendOperation(' + ')" class="highlight">+</td>
+            <td class="highlight"></td>
         </tr>
 
         <tr>
-            <td onclick="appendOperation(0)">0</td>
+            <td onclick="appendOperation(0)" class="number">0</td>
             <td onclick="appendOperation('.')" class="highlight">.</td>
-            <td onclick="calculatResult()" id="result">= (Leertaste)</td>
+            <td onclick="calculatResult()" id="result">=</td>
             <td onclick="appendOperation(' - ')" class="highlight">-</td>
+            <td class="highlight"></td>
         </tr>
 
     </table>
-
 </bod>
 </html>
