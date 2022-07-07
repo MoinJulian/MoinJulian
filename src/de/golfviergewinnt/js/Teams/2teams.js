@@ -495,7 +495,7 @@ function TestWinBlue() {
         feld28 == team0 && feld35 == team0 && feld42 == team0 && feld49 == team0 ||
         feld35 == team0 && feld42 == team0 && feld49 == team0 && feld56 == team0 
         ) {
-        writeInfo("Das Dunkeltürkise Team hat das Spiel gewonnen. <br> Herzlichen Glückwunsch!");
+        writeInfo("Das Dunkelgoldene Team hat das Spiel gewonnen. <br> Herzlichen Glückwunsch!");
         changeTeam();
         currentPlayer();
         setTimeout(function() {
@@ -621,7 +621,7 @@ function writeInfo(txt) {
 function currentPlayer() {
     if(teams == 1) {
         document.getElementById("currentPlayer").style.backgroundColor = team0;
-        document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkeltürkise Team ist dran!";
+        document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelgoldene Team ist dran!";
     }else if(teams == 0) {
         document.getElementById("currentPlayer").style.backgroundColor = team1;
         document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelrote Team ist am Zug!";

@@ -918,14 +918,14 @@ function field(fieldnb) { //Testet welches Feld angeklickt wurde.
             }
     }
     changeTeam();
-    TestWinCyan();
+    TestWinGold();
     TestWinRed();
     TestWinBlue();
     TestWinOrange();
     TestWinGrey();
 }
 
-function TestWinCyan() { //Testet ob das Türkise Team gewonnen hat.
+function TestWinGold() { //Testet ob das Türkise Team gewonnen hat.
     if (
         // 1. Reihe
         feld1 == team0 && feld2 == team0 && feld3 == team0 && feld4 == team0 ||
@@ -1011,7 +1011,7 @@ function TestWinCyan() { //Testet ob das Türkise Team gewonnen hat.
         feld28 == team0 && feld35 == team0 && feld42 == team0 && feld49 == team0 ||
         feld35 == team0 && feld42 == team0 && feld49 == team0 && feld56 == team0 
         ) {
-        writeInfo("Das Dunkeltürkise Team hat das Spiel gewonnen. <br> Herzlichen Glückwunsch!");
+        writeInfo("Das Dunkelgoldene Team hat das Spiel gewonnen. <br> Herzlichen Glückwunsch!");
         setTimeout(function() {
             location.reload();
         },2000)
@@ -1419,7 +1419,7 @@ function currentPlayer() { //Druckt aus welches Team gerade dran ist.
         document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelgraue Team ist dran!";
     }else if(teams == 4) {
         document.getElementById("currentPlayer").style.backgroundColor = team0;
-        document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkeltürkise Team ist dran!";
+        document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelgoldene Team ist dran!";
     }else {
         console.log("Bitte Kontaktieren sie unsren Developer um im das Problem mit zu teilen! E-Mail: moinjulian.dev@outlook.com");
     }

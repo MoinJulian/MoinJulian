@@ -1276,7 +1276,7 @@ function TestWinGold() { //Testet ob das T체rkise Team gewonnen hat.
         feld28 == team0 && feld35 == team0 && feld42 == team0 && feld49 == team0 ||
         feld35 == team0 && feld42 == team0 && feld49 == team0 && feld56 == team0 
         ) {
-        writeInfo("Das Dunkelt체rkise Team hat das Spiel gewonnen. <br> Herzlichen Gl체ckwunsch!");
+        writeInfo("Das Dunkelgoldene Team hat das Spiel gewonnen. <br> Herzlichen Gl체ckwunsch!");
         setTimeout(function() {
             location.reload();
         },2000)
@@ -1741,7 +1741,7 @@ function TestWinCyan() { //Testet ob das Orangene Team gewonnen hat. Muss noch �
         feld28 == team5 && feld35 == team5 && feld42 == team5 && feld49 == team5 ||
         feld35 == team5 && feld42 == team5 && feld49 == team5 && feld56 == team5 
     ) {
-        writeInfo("Das Dunkelgraue Team hat das Spiel gewonnen. <br> Herzlichen Gl체ckwunsch!");
+        writeInfo("Das Dunkelt체rkise Team hat das Spiel gewonnen. <br> Herzlichen Gl체ckwunsch!");
         setTimeout(function() {
             location.reload();
         },2000)
@@ -1782,7 +1782,7 @@ function currentPlayer() { //Druckt aus welches Team gerade dran ist.
         document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelt체rkise Team ist dran!";
     }else if(teams == 5) {
         document.getElementById("currentPlayer").style.backgroundColor = team0;
-        document.getElementById("currentPlayer").innerHTML = "Team: Das Goldene Team ist dran!";
+        document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelgoldene Team ist dran!";
     }else {
         console.log("Bitte Kontaktieren sie unsren Developer um im das Problem mit zu teilen! E-Mail: moinjulian.dev@outlook.com");
     }

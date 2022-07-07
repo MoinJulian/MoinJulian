@@ -667,7 +667,7 @@ function TestWinCyan() {
         feld28 == team0 && feld35 == team0 && feld42 == team0 && feld49 == team0 ||
         feld35 == team0 && feld42 == team0 && feld49 == team0 && feld56 == team0 
         ) {
-        writeInfo("Das Dunkeltürkise Team hat das Spiel gewonnen. <br> Herzlichen Glückwunsch!");
+        writeInfo("Das Dunkelgoldene Team hat das Spiel gewonnen. <br> Herzlichen Glückwunsch!");
         setTimeout(function() {
             location.reload();
         },2000)
@@ -890,7 +890,7 @@ function currentPlayer() {
         document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelblaue Team ist am Zug!";
     }else if(teams == 2) {
         document.getElementById("currentPlayer").style.backgroundColor = team0;
-        document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkeltürkise Team ist dran!";
+        document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelgoldene Team ist dran!";
     }else {
         console.log("Bitte Kontaktieren sie unsren Developer um im das Problem mit zu teilen! E-Mail: moinjulian.dev@outlook.com");
     }
