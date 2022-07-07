@@ -1,0 +1,76 @@
+body {
+  background-color: #242424;
+  color: white;
+}
+
+#password_generator {
+  height: 100vh;
+  width: 100vw;
+  background-color: #242424;
+}
+
+#pwl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#length {
+  justify-content: center;
+  margin-top: 10vh;
+  width: 20vw;
+  height: 5vh;
+  background-color: blue;
+  border-color: blue;
+  color: white;
+}
+
+#length::placeholder {
+  color: #c9c9c9;
+}
+
+#cb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+#pw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  background-color: #ffffff;
+  color: black;
+  border: 1vw #e4e5e3 none;
+}
+
+#generate_pw {
+  background-color: blue;
+  width: 20vw;
+  height: 5vh;
+  border-color: blue;
+  color: white;
+  margin-top: 20vh;
+}
+
+#pw_output {
+  justify-content: center;
+  align-items: center;
+  margin-top: -10vh;
+  position: absolute;
+  width: 50vw;
+  height: 5vh;
+}
+
+#pw_output::placeholder {
+  color: #525252;
+}
+
+#generate_pw:hover {
+  opacity: 0.5;
+}

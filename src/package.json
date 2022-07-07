@@ -1,0 +1,19 @@
+{
+  "name": "mainprogramm",
+  "version": "1.0.0",
+  "description": "<-- Dies ist die offiziele Website von MoinJulian  YouTube Kanal: https://youtube.com/channel/UCls1hOj_UaT9Kl-8V22ylag Auf dieser Website gibt es ein Jump and Run mit 100 Leveln, ein Timer, ein Taschenrechner, ein 3d Würfel, ein Quiz,  ein Snake Game, ein Sudoku Solver, ein Tic Tac Toe Game, eine Todoliste und vieles mehr.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoinJulian/Mein-eigenes-Programm.git"
+  },
+  "author": "MoinJulian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoinJulian/Mein-eigenes-Programm/issues"
+  },
+  "homepage": "https://github.com/MoinJulian/Mein-eigenes-Programm#readme"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "mainprogramm",
+  "version": "1.0.0",
+  "description": "My nice website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoinJulian/Mein-eigenes-Programm.git"
+  },
+  "author": "MoinJulian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoinJulian/Mein-eigenes-Programm/issues"
+  },
+  "homepage": "https://github.com/MoinJulian/Mein-eigenes-Programm#readme"
+}

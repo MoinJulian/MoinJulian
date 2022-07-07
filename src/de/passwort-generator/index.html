@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.codepalm.de/wp-content/themes/atomik_theme/js/jQuery/jquery.1.11.03.min.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="../index/index.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Passwort Generator</title>
+  </head>
+  <body>
+    <a href="../../index.html" class="link">Hauptseite</a>
+    <div id="password_generator">
+      <div id="pwl">
+        <input
+          type="number"
+          id="length"
+          name="length"
+          value="16"
+          placeholder="Länge des Passworts"
+        />
+      </div>
+      <div id="cb">
+        <input
+          type="checkbox"
+          id="low_characters"
+          name="low_characters"
+          checked
+          value="on"
+        /><label for="low_characters">Kleinbuchstaben</label>
+        <input
+          type="checkbox"
+          id="upper_characters"
+          name="upper_characters"
+          checked
+          value="on"
+        /><label for="upper_characters">Großbuchstaben</label>
+        <input
+          type="checkbox"
+          id="number_characters"
+          name="number_characters"
+          checked
+          value="on"
+        /><label for="number_characters">Zahlen</label>
+        <input
+          type="checkbox"
+          id="special_characters"
+          name="special_characters"
+          checked
+          value="on"
+        /><label for="special_characters">Sonderzeichen</label>
+      </div>
+      <div id="pw">
+        <input
+          type="button"
+          id="generate_pw"
+          name="generate_pw"
+          value="Passwort generieren"
+        />
+        <input
+          type="text"
+          id="pw_output"
+          name="pw_output"
+          value=""
+          placeholder="Passwort"
+          readonly
+        />
+      </div>
+    </div>
+  </body>
+</html>

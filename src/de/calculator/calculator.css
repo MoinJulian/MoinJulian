@@ -1,0 +1,98 @@
+body {
+  background-color: rgb(37, 37, 38);
+}
+
+.taschenrechner {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+table {
+  width: 100%;
+  height: 55vh;
+  background-color: rgb(37, 37, 38);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+td {
+  width: 25%;
+  text-align: center;
+  font-size: 20px;
+}
+
+td:hover {
+  background-color: rgb(30, 30, 30);
+  cursor: pointer;
+}
+
+#resultArea {
+  width: -200%;
+  height: 30vh;
+  background-color: rgb(45, 45, 45);
+  color: white;
+  font-size: 64px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#result {
+  background-color: rgb(50, 37, 236);
+}
+
+#result:hover {
+  background-color: rgb(16, 0, 240);
+}
+
+.highlight {
+  background-color: rgb(25, 25, 25);
+}
+
+.fold {
+  width: 20vw;
+  height: 1vh;
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+summary {
+  position: relative;
+  left: 1vw;
+}
+
+summary::marker {
+  color: transparent;
+}
+
+summary::after {
+  content: "+";
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  left: 22vw;
+  top: 0vw;
+  transition: all 0.5s;
+}
+
+details[open] summary::after {
+  color: red;
+  transform: translate(5px, 0) rotate(45deg);
+}
+
+#divmore {
+  height: 1vh;
+}
+
+.fold {
+  height: 1vh;
+}
+
+#more {
+  height: 1vh;
+  background-color: rgb(25, 25, 25);
+}
