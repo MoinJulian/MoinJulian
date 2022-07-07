@@ -54,7 +54,7 @@ let feld53;
 let feld54;
 let feld55;
 let feld56;
-let team0 = "darkcyan"; //blaues Team
+let team0 = "darkgoldenrod"; //blaues Team
 let team1 = "darkred"; //rotes Team
 let teams = 0;
 

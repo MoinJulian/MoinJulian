@@ -55,7 +55,7 @@ let feld53;
 let feld54;
 let feld55;
 let feld56;
-let team0 = "darkcyan";
+let team0 = "darkgoldenrod";
 let team1 = "darkred";
 let team2 = "darkblue"; 
 
@@ -894,71 +894,4 @@ function currentPlayer() {
     }else {
         console.log("Bitte Kontaktieren sie unsren Developer um im das Problem mit zu teilen! E-Mail: moinjulian.dev@outlook.com");
     }
-}
-
-function setNull() {
-    feld1 = null;feld2 = null;feld3 = null;feld4 = null;feld5 = null;feld6 = null;feld7 = null;
-    feld8 = null;feld9 = null;feld10 = null;feld11 = null;feld12 = null;feld13 = null;feld14 = null;
-    feld15 = null;feld16 = null;feld17 = null;feld18 = null;feld19 = null;feld20 = null;feld21 = null;
-    feld22 = null;feld23 = null;feld24 = null;feld25 = null;feld26 = null;feld27 = null;feld28 = null;
-    feld29 = null;feld30 = null;feld31 = null;feld32 = null;feld33 = null;feld34 = null;feld35 = null;
-    feld36 = null;feld37 = null;feld38 = null;feld39 = null;feld40 = null;feld41 = null;feld42 = null;
-    feld43 = null;feld44 = null;feld45 = null;feld46 = null;feld47 = null;feld48 = null;feld49 = null;
-    feld50 = null;feld51 = null;feld52 = null;feld53 = null;feld54 = null;feld55 = null;feld56 = null;
-    document.getElementById("1").style.backgroundColor = "transparent";
-    document.getElementById("2").style.backgroundColor = "transparent";
-    document.getElementById("3").style.backgroundColor = "transparent";
-    document.getElementById("4").style.backgroundColor = "transparent";
-    document.getElementById("5").style.backgroundColor = "transparent";
-    document.getElementById("6").style.backgroundColor = "transparent";
-    document.getElementById("7").style.backgroundColor = "transparent";
-    document.getElementById("8").style.backgroundColor = "transparent";
-    document.getElementById("9").style.backgroundColor = "transparent";
-    document.getElementById("10").style.backgroundColor = "transparent";
-    document.getElementById("11").style.backgroundColor = "transparent";
-    document.getElementById("12").style.backgroundColor = "transparent";
-    document.getElementById("13").style.backgroundColor = "transparent";
-    document.getElementById("14").style.backgroundColor = "transparent";
-    document.getElementById("15").style.backgroundColor = "transparent";
-    document.getElementById("16").style.backgroundColor = "transparent";
-    document.getElementById("17").style.backgroundColor = "transparent";
-    document.getElementById("18").style.backgroundColor = "transparent";
-    document.getElementById("19").style.backgroundColor = "transparent";
-    document.getElementById("20").style.backgroundColor = "transparent";
-    document.getElementById("21").style.backgroundColor = "transparent";
-    document.getElementById("22").style.backgroundColor = "transparent";
-    document.getElementById("23").style.backgroundColor = "transparent";
-    document.getElementById("24").style.backgroundColor = "transparent";
-    document.getElementById("25").style.backgroundColor = "transparent";
-    document.getElementById("26").style.backgroundColor = "transparent";
-    document.getElementById("27").style.backgroundColor = "transparent";
-    document.getElementById("28").style.backgroundColor = "transparent";
-    document.getElementById("29").style.backgroundColor = "transparent";
-    document.getElementById("30").style.backgroundColor = "transparent";
-    document.getElementById("31").style.backgroundColor = "transparent";
-    document.getElementById("32").style.backgroundColor = "transparent";
-    document.getElementById("33").style.backgroundColor = "transparent";
-    document.getElementById("34").style.backgroundColor = "transparent";
-    document.getElementById("35").style.backgroundColor = "transparent";
-    document.getElementById("36").style.backgroundColor = "transparent";
-    document.getElementById("37").style.backgroundColor = "transparent";
-    document.getElementById("38").style.backgroundColor = "transparent";
-    document.getElementById("39").style.backgroundColor = "transparent";
-    document.getElementById("40").style.backgroundColor = "transparent";
-    document.getElementById("41").style.backgroundColor = "transparent";
-    document.getElementById("42").style.backgroundColor = "transparent";
-    document.getElementById("43").style.backgroundColor = "transparent";
-    document.getElementById("44").style.backgroundColor = "transparent";
-    document.getElementById("45").style.backgroundColor = "transparent";
-    document.getElementById("46").style.backgroundColor = "transparent";
-    document.getElementById("47").style.backgroundColor = "transparent";
-    document.getElementById("48").style.backgroundColor = "transparent";
-    document.getElementById("49").style.backgroundColor = "transparent";
-    document.getElementById("50").style.backgroundColor = "transparent";
-    document.getElementById("51").style.backgroundColor = "transparent";
-    document.getElementById("52").style.backgroundColor = "transparent";
-    document.getElementById("53").style.backgroundColor = "transparent";
-    document.getElementById("54").style.backgroundColor = "transparent";
-    document.getElementById("55").style.backgroundColor = "transparent";
-    document.getElementById("56").style.backgroundColor = "transparent";
 }
