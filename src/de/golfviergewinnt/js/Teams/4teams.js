@@ -750,6 +750,7 @@ function field(fieldnb) { //Testet welches Feld angeklickt wurde.
     TestWinCyan();
     TestWinRed();
     TestWinBlue();
+    TestWinOrange();
 }
 
 function TestWinCyan() { //Testet ob das Türkise Team gewonnen hat.
@@ -1034,90 +1035,90 @@ function TestWinBlue() { //Testet ob das Blau Team gewonnen hat.
 function TestWinOrange() { //Testet ob das Orangene Team gewonnen hat. Muss noch überarbeitet werden
     if (
         // 1. Reihe
-        feld1 == team2 && feld2 == team2 && feld3 == team2 && feld4 == team2 ||
-        feld2 == team2 && feld3 == team2 && feld4 == team2 && feld5 == team2 ||
-        feld3 == team2 && feld4 == team2 && feld5 == team2 && feld6 == team2 ||
-        feld4 == team2 && feld5 == team2 && feld6 == team2 && feld7 == team2 ||
+        feld1 == team3 && feld2 == team3 && feld3 == team3 && feld4 == team3 ||
+        feld2 == team3 && feld3 == team3 && feld4 == team3 && feld5 == team3 ||
+        feld3 == team3 && feld4 == team3 && feld5 == team3 && feld6 == team3 ||
+        feld4 == team3 && feld5 == team3 && feld6 == team3 && feld7 == team3 ||
         // 2. Reihe
-        feld8 == team2 && feld9 == team2 && feld10 == team2 && feld11 == team2 ||
-        feld9 == team2 && feld10 == team2 && feld11 == team2 && feld12 == team2 ||
-        feld10 == team2 && feld11 == team2 && feld12 == team2 && feld13 == team2 ||
-        feld11 == team2 && feld12 == team2 && feld13 == team2 && feld14 == team2 ||
+        feld8 == team3 && feld9 == team3 && feld10 == team3 && feld11 == team3 ||
+        feld9 == team3 && feld10 == team3 && feld11 == team3 && feld12 == team3 ||
+        feld10 == team3 && feld11 == team3 && feld12 == team3 && feld13 == team3 ||
+        feld11 == team3 && feld12 == team3 && feld13 == team3 && feld14 == team3 ||
         //3. Reihe
-        feld15 == team2 && feld16 == team2 && feld17 == team2 && feld18 == team2 ||
-        feld16 == team2 && feld17 == team2 && feld18 == team2 && feld19 == team2 ||
-        feld17 == team2 && feld18 == team2 && feld19 == team2 && feld20 == team2 ||
-        feld18 == team2 && feld19 == team2 && feld20 == team2 && feld21 == team2 ||
+        feld15 == team3 && feld16 == team3 && feld17 == team3 && feld18 == team3 ||
+        feld16 == team3 && feld17 == team3 && feld18 == team3 && feld19 == team3 ||
+        feld17 == team3 && feld18 == team3 && feld19 == team3 && feld20 == team3 ||
+        feld18 == team3 && feld19 == team3 && feld20 == team3 && feld21 == team3 ||
         //4.Reihe
-        feld22 == team2 && feld23 == team2 && feld24 == team2 && feld25 == team2 ||
-        feld23 == team2 && feld24 == team2 && feld25 == team2 && feld26 == team2 ||
-        feld24 == team2 && feld25 == team2 && feld26 == team2 && feld27 == team2 ||
-        feld25 == team2 && feld26 == team2 && feld27 == team2 && feld28 == team2 ||
+        feld22 == team3 && feld23 == team3 && feld24 == team3 && feld25 == team3 ||
+        feld23 == team3 && feld24 == team3 && feld25 == team3 && feld26 == team3 ||
+        feld24 == team3 && feld25 == team3 && feld26 == team3 && feld27 == team3 ||
+        feld25 == team3 && feld26 == team3 && feld27 == team3 && feld28 == team3 ||
         //5. Reihe
-        feld29 == team2 && feld30 == team2 && feld31 == team2 && feld32 == team2 ||
-        feld30 == team2 && feld31 == team2 && feld32 == team2 && feld33 == team2 ||
-        feld31 == team2 && feld32 == team2 && feld33 == team2 && feld34 == team2 ||
-        feld32 == team2 && feld33 == team2 && feld34 == team2 && feld35 == team2 ||
+        feld29 == team3 && feld30 == team3 && feld31 == team3 && feld32 == team3 ||
+        feld30 == team3 && feld31 == team3 && feld32 == team3 && feld33 == team3 ||
+        feld31 == team3 && feld32 == team3 && feld33 == team3 && feld34 == team3 ||
+        feld32 == team3 && feld33 == team3 && feld34 == team3 && feld35 == team3 ||
         //6. Reihe
-        feld36 == team2 && feld37 == team2 && feld38 == team2 && feld39 == team2 ||
-        feld37 == team2 && feld38 == team2 && feld39 == team2 && feld40 == team2 ||
-        feld38 == team2 && feld39 == team2 && feld40 == team2 && feld41 == team2 ||
-        feld39 == team2 && feld40 == team2 && feld41 == team2 && feld42 == team2 ||
+        feld36 == team3 && feld37 == team3 && feld38 == team3 && feld39 == team3 ||
+        feld37 == team3 && feld38 == team3 && feld39 == team3 && feld40 == team3 ||
+        feld38 == team3 && feld39 == team3 && feld40 == team3 && feld41 == team3 ||
+        feld39 == team3 && feld40 == team3 && feld41 == team3 && feld42 == team3 ||
         // 7. Reihe
-        feld43 == team2 && feld44 == team2 && feld45 == team2 && feld46 == team2 ||
-        feld44 == team2 && feld45 == team2 && feld46 == team2 && feld47 == team2 ||
-        feld45 == team2 && feld46 == team2 && feld47 == team2 && feld48 == team2 ||
-        feld46 == team2 && feld47 == team2 && feld48 == team2 && feld48 == team2 ||
+        feld43 == team3 && feld44 == team3 && feld45 == team3 && feld46 == team3 ||
+        feld44 == team3 && feld45 == team3 && feld46 == team3 && feld47 == team3 ||
+        feld45 == team3 && feld46 == team3 && feld47 == team3 && feld48 == team3 ||
+        feld46 == team3 && feld47 == team3 && feld48 == team3 && feld48 == team3 ||
         //8. Reihe
-        feld49 == team2 && feld50 == team2 && feld51 == team2 && feld52 == team2 ||
-        feld50 == team2 && feld51 == team2 && feld52 == team2 && feld53 == team2 ||
-        feld51 == team2 && feld52 == team2 && feld53 == team2 && feld54 == team2 ||
-        feld52 == team2 && feld53 == team2 && feld54 == team2 && feld55 == team2 ||
-        feld53 == team2 && feld54 == team2 && feld55 == team2 && feld56 == team2 ||
+        feld49 == team3 && feld50 == team3 && feld51 == team3 && feld52 == team3 ||
+        feld50 == team3 && feld51 == team3 && feld52 == team3 && feld53 == team3 ||
+        feld51 == team3 && feld52 == team3 && feld53 == team3 && feld54 == team3 ||
+        feld52 == team3 && feld53 == team3 && feld54 == team3 && feld55 == team3 ||
+        feld53 == team3 && feld54 == team3 && feld55 == team3 && feld56 == team3 ||
         //1. Spalte
-        feld1 == team2 && feld8 == team2 && feld15 == team2 && feld22 == team2 ||
-        feld8 == team2 && feld15 == team2 && feld22 == team2 && feld29 == team2 ||
-        feld15 == team2 && feld22 == team2 && feld29 == team2 && feld36 == team2 ||
-        feld22 == team2 && feld29 == team2 && feld36 == team2 && feld43 == team2 ||
-        feld29 == team2 && feld36 == team2 && feld43 == team2 && feld50 == team2 ||
+        feld1 == team3 && feld8 == team3 && feld15 == team3 && feld22 == team3 ||
+        feld8 == team3 && feld15 == team3 && feld22 == team3 && feld29 == team3 ||
+        feld15 == team3 && feld22 == team3 && feld29 == team3 && feld36 == team3 ||
+        feld22 == team3 && feld29 == team3 && feld36 == team3 && feld43 == team3 ||
+        feld29 == team3 && feld36 == team3 && feld43 == team3 && feld50 == team3 ||
         //2. Spalte
-        feld2 == team2 && feld9 == team2 && feld16 == team2 && feld23 == team2 ||
-        feld9 == team2 && feld16 == team2 && feld23 == team2 && feld30 == team2 ||
-        feld16 == team2 && feld23 == team2 && feld30 == team2 && feld37 == team2 ||
-        feld23 == team2 && feld30 == team2 && feld37 == team2 && feld44 == team2 ||
-        feld30 == team2 && feld37 == team2 && feld44 == team2 && feld51 == team2 ||
+        feld2 == team3 && feld9 == team3 && feld16 == team3 && feld23 == team3 ||
+        feld9 == team3 && feld16 == team3 && feld23 == team3 && feld30 == team3 ||
+        feld16 == team3 && feld23 == team3 && feld30 == team3 && feld37 == team3 ||
+        feld23 == team3 && feld30 == team3 && feld37 == team3 && feld44 == team3 ||
+        feld30 == team3 && feld37 == team3 && feld44 == team3 && feld51 == team3 ||
         //3. Spalte
-        feld3 == team2 && feld10 == team2 && feld17 == team2 && feld24 == team2 ||
-        feld10 == team2 && feld17 == team2 && feld24 == team2 && feld31 == team2 ||
-        feld17 == team2 && feld24 == team2 && feld31 == team2 && feld38 == team2 ||
-        feld24 == team2 && feld31 == team2 && feld38 == team2 && feld45 == team2 ||
-        feld31 == team2 && feld38 == team2 && feld45 == team2 && feld52 == team2 ||
+        feld3 == team3 && feld10 == team3 && feld17 == team3 && feld24 == team3 ||
+        feld10 == team3 && feld17 == team3 && feld24 == team3 && feld31 == team3 ||
+        feld17 == team3 && feld24 == team3 && feld31 == team3 && feld38 == team3 ||
+        feld24 == team3 && feld31 == team3 && feld38 == team3 && feld45 == team3 ||
+        feld31 == team3 && feld38 == team3 && feld45 == team3 && feld52 == team3 ||
         //4. Spalte
-        feld4 == team2 && feld11 == team2 && feld18 == team2 && feld25 == team2 ||
-        feld11 == team2 && feld18 == team2 && feld25 == team2 && feld32 == team2 ||
-        feld18 == team2 && feld25 == team2 && feld32 == team2 && feld39 == team2 ||
-        feld25 == team2 && feld32 == team2 && feld39 == team2 && feld46 == team2 ||
-        feld32 == team2 && feld39 == team2 && feld46 == team2 && feld53 == team2 ||
+        feld4 == team3 && feld11 == team3 && feld18 == team3 && feld25 == team3 ||
+        feld11 == team3 && feld18 == team3 && feld25 == team3 && feld32 == team3 ||
+        feld18 == team3 && feld25 == team3 && feld32 == team3 && feld39 == team3 ||
+        feld25 == team3 && feld32 == team3 && feld39 == team3 && feld46 == team3 ||
+        feld32 == team3 && feld39 == team3 && feld46 == team3 && feld53 == team3 ||
         //5. Spalte
-        feld5 == team2 && feld12 == team2 && feld19 == team2 && feld26 == team2 ||
-        feld12 == team2 && feld19 == team2 && feld26 == team2 && feld33 == team2 ||
-        feld19 == team2 && feld26 == team2 && feld33 == team2 && feld40 == team2 ||
-        feld26 == team2 && feld33 == team2 && feld40 == team2 && feld47 == team2 ||
-        feld33 == team2 && feld40 == team2 && feld47 == team2 && feld54 == team2 ||
+        feld5 == team3 && feld12 == team3 && feld19 == team3 && feld26 == team3 ||
+        feld12 == team3 && feld19 == team3 && feld26 == team3 && feld33 == team3 ||
+        feld19 == team3 && feld26 == team3 && feld33 == team3 && feld40 == team3 ||
+        feld26 == team3 && feld33 == team3 && feld40 == team3 && feld47 == team3 ||
+        feld33 == team3 && feld40 == team3 && feld47 == team3 && feld54 == team3 ||
         //6. Spalte
-        feld6 == team2 && feld13 == team2 && feld20 == team2 && feld27 == team2 ||
-        feld13 == team2 && feld20 == team2 && feld27 == team2 && feld34 == team2 ||
-        feld20 == team2 && feld27 == team2 && feld34 == team2 && feld41 == team2 ||
-        feld27 == team2 && feld34 == team2 && feld41 == team2 && feld48 == team2 ||
-        feld34 == team2 && feld41 == team2 && feld48 == team2 && feld55 == team2 ||
+        feld6 == team3 && feld13 == team3 && feld20 == team3 && feld27 == team3 ||
+        feld13 == team3 && feld20 == team3 && feld27 == team3 && feld34 == team3 ||
+        feld20 == team3 && feld27 == team3 && feld34 == team3 && feld41 == team3 ||
+        feld27 == team3 && feld34 == team3 && feld41 == team3 && feld48 == team3 ||
+        feld34 == team3 && feld41 == team3 && feld48 == team3 && feld55 == team3 ||
         //7. Spalte
-        feld7 == team2 && feld14 == team2 && feld21 == team2 && feld28 == team2 ||
-        feld14 == team2 && feld21 == team2 && feld28 == team2 && feld35 == team2 ||
-        feld21 == team2 && feld28 == team2 && feld35 == team2 && feld42 == team2 ||
-        feld28 == team2 && feld35 == team2 && feld42 == team2 && feld49 == team2 ||
-        feld35 == team2 && feld42 == team2 && feld49 == team2 && feld56 == team2 
+        feld7 == team3 && feld14 == team3 && feld21 == team3 && feld28 == team3 ||
+        feld14 == team3 && feld21 == team3 && feld28 == team3 && feld35 == team3 ||
+        feld21 == team3 && feld28 == team3 && feld35 == team3 && feld42 == team3 ||
+        feld28 == team3 && feld35 == team3 && feld42 == team3 && feld49 == team3 ||
+        feld35 == team3 && feld42 == team3 && feld49 == team3 && feld56 == team3 
     ) {
-        writeInfo("Das Dunkelblaue Team hat das Spiel gewonnen. <br> Herzlichen Glückwunsch!");
+        writeInfo("Das Dunkelorangene Team hat das Spiel gewonnen. <br> Herzlichen Glückwunsch!");
         setTimeout(function() {
             location.reload();
         },2000)
@@ -1144,11 +1145,11 @@ function currentPlayer() { //Druckt aus welches Team gerade dran ist.
         document.getElementById("currentPlayer").style.backgroundColor = team2;
         document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelblaue Team ist am Zug!";
     }else if(teams == 2) {
+        document.getElementById("currentPlayer").style.backgroundColor = team3;
+        document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelorangene Team ist dran!";
+    }else if(teams == 3) {
         document.getElementById("currentPlayer").style.backgroundColor = team0;
         document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkeltürkise Team ist dran!";
-    }else if(teams == 3) {
-        document.getElementById("currentPlayer").style.backgroundColor = team3;
-        document.getElementById("currentPlayer").innerHTML = "Team: Das Dunkelorange Team ist dran!";
     }else {
         console.log("Bitte Kontaktieren sie unsren Developer um im das Problem mit zu teilen! E-Mail: moinjulian.dev@outlook.com");
     }
