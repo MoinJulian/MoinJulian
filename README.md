@@ -2,7 +2,7 @@
 
 Hi I'm Julian!
 
-I'm 16 years old and like to build websites with HTML, CSS and JavaScript.
+I'm 16 years old and love to build websites with [SvelteKit](https://kit.svelte.dev/)
 
 My finished projects can you found on my [website](https://moinjulian.com). 
 
