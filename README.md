@@ -2,7 +2,7 @@
 
 Hi I'm Julian!
 
-I'm 16 years old and love to build websites with Astro and Svelte
+I'm 16 years old and love to build websites with Svelte
 
 My finished projects can you found on my [website](https://moinjulian.com). 
 
