@@ -16,4 +16,4 @@ You also can reach my via [Support MoinJulian](support@moinjulian.com)
 
 ## Most used languages
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&theme=tokyonight)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&theme=tokyonight&langs_count=10)
