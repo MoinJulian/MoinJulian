@@ -10,6 +10,18 @@ I'm 16 years old and love to build websites with Svelte and SvelteKit. I'm curre
 
 My finished projects can be found on my [website](https://moinjulian.com).
 
+### My favourite Project
+
+My favorite project is my golf game SvelteKit applications, a website with three
+different golf games and a user authentication with SvelteKit and MongoDB. The user can
+save the games in the database and copy the data from the games tab and paste it on
+the right game, also the games are always saved in the local storage, so the user can
+continue playing from their old save game no matter if he has reloaded the site or
+accidentally closed it, to start a new game the user has to click on the Restart Game
+button or a team must have won, only then the data will be deleted from localStorage.
+
+Here you can play the games: [Golf Games](https://golf.moinjulian.com)
+
 ## YouTube
 
 In case you know German you can find tutorials on my [YouTube channel](https://www.youtube.com/@moinjulian).
