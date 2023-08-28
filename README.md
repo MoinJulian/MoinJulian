@@ -8,7 +8,7 @@ I'm 16 years old and love to build websites with Svelte and SvelteKit. I'm curre
 
 ## Profile Stats
 
-![Julian Hammer's Stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=dark&count_private=true&include_all_commits=true)
+![Julian Hammer's Stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true&theme=dark&count_private=true&include_all_commits=true)
 
 ## Most used languages
 
