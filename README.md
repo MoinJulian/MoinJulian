@@ -1,16 +1,24 @@
-# :wave: Welcome to my GitHub page
+# Welcome to my GitHub page
 
-## About me
+# About me
 
 Hi I'm Julian!
 
 I'm 16 years old and love to build websites with Svelte and SvelteKit. I'm currently diving into Back End development with MongoDB and SvelteKit.
 
-## Projects
+## Profile Stats
+
+![Julian Hammer's Stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=dark&count_private=true&include_all_commits=true)
+
+## Most used languages
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+
+# Projects
 
 My finished projects can be found on my [website](https://moinjulian.com).
 
-### My favourite Project
+## My favourite Project
 
 My favorite project is my golf game SvelteKit applications, a website with three
 different golf games and a user authentication with SvelteKit and MongoDB. The user can
@@ -22,18 +30,10 @@ button or a team must have won, only then the data will be deleted from localSto
 
 Here you can play the games: [Golf Games](https://golf.moinjulian.com)
 
-## YouTube
+# YouTube
 
 In case you know German you can find tutorials on my [YouTube channel](https://www.youtube.com/@moinjulian).
 
-## Contact
+# Contact
 
 You also can reach my via [Support MoinJulian](support@moinjulian.com)
-
-## Profile Stats
-
-![MoinJulian's Stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true)
-
-## Most used languages
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&layout=donut)](https://github.com/anuraghazra/github-readme-stats)
