@@ -6,6 +6,10 @@ Hi I'm Julian!
 
 I'm 16 years old and love to build websites with Svelte and SvelteKit. I'm currently diving into Back End development with MongoDB and SvelteKit.
 
+## Streak
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=moinjulian&theme=dark)](https://git.io/streak-stats)
+
 ## Profile Stats
 
 ![Julian Hammer's Stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true&theme=dark)
