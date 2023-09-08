@@ -16,8 +16,7 @@ I'm 16 years old and love to build websites with Svelte and SvelteKit. I'm curre
 
 ## Most used languages
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-
+![image](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&layout=compact&langs_count=10&hide_border=true&title_color=ffffff&icon_color=ffffff&text_color=ffffff&bg_color=000000)
 # Projects
 
 My finished projects can be found on my [website](https://moinjulian.com).
