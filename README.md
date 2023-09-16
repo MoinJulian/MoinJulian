@@ -4,6 +4,19 @@
 
 Hi I'm Julian a 16 years old Full Stack Web developer, I have learned SvelteKit and MongoDB, I'm also working as an Full Stack Developer.
 
+## My favourite Project
+
+My favorite project is my **Golf Games** SvelteKit applications. 
+A website with three different golf games and a user authentication with SvelteKit 
+and MongoDB. The user cansave the games in the database and copy the data from the 
+games tab and paste it onthe right game, also the games are always saved in the local 
+storage, so the user cancontinue playing from their old save game no matter if he has
+reloaded the site or accidentally closed it, to start a new game the user has to click 
+on the Restart Gamebutton or a team must have won, only then the data will be deleted 
+from localStorage.
+
+Here you can play the games: [Golf Games](https://golf.moinjulian.com)
+
 ## Streak
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=moinjulian&theme=dark)](https://git.io/streak-stats)
@@ -18,18 +31,6 @@ Hi I'm Julian a 16 years old Full Stack Web developer, I have learned SvelteKit 
 # Projects
 
 My finished projects can be found on my [website](https://moinjulian.com).
-
-## My favourite Project
-
-My favorite project is my golf game SvelteKit applications, a website with three
-different golf games and a user authentication with SvelteKit and MongoDB. The user can
-save the games in the database and copy the data from the games tab and paste it on
-the right game, also the games are always saved in the local storage, so the user can
-continue playing from their old save game no matter if he has reloaded the site or
-accidentally closed it, to start a new game the user has to click on the Restart Game
-button or a team must have won, only then the data will be deleted from localStorage.
-
-Here you can play the games: [Golf Games](https://golf.moinjulian.com)
 
 # YouTube
 
