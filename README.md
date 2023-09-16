@@ -2,9 +2,7 @@
 
 # About me
 
-Hi I'm Julian!
-
-I'm 16 years old and love to build websites with Svelte and SvelteKit. I'm currently diving into Back End development with MongoDB and SvelteKit.
+Hi I'm Julian a 16 years old Full Stack Web developer, I have learned SvelteKit and MongoDB, I'm also working as an Full Stack Developer.
 
 ## Streak
 
