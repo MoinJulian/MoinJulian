@@ -1,6 +1,6 @@
 # Welcome to my GitHub page
 
-# About me
+## About me
 
 Hi I'm Julian a 16 years old Full Stack Web developer, I have learned SvelteKit and MongoDB, I'm also working as an Full Stack Developer.
 
