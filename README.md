@@ -13,11 +13,11 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Streak
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=moinjulian&theme=dark)](https://git.io/streak-stats)
+[![GitHub Streak](https://github-readme-streak-stats-eight-blue.vercel.app?user=moinjulian&theme=dark)](https://git.io/streak-stats)
 
 ## Profile Stats
 
-[![Julian Hammer GitHub Streak](https://github-readme-streak-stats-eight-blue.vercel.app?user=moinjulian&theme=dark)](https://git.io/streak-stats)
+![Julian Hammer's GitHub stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true&theme=dark)
 
 ## Most used languages
 
