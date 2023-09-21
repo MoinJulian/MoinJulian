@@ -13,7 +13,7 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Streak
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=moinjulian)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=moinjulian&theme=dark)](https://git.io/streak-stats)
 
 ## Profile Stats
 
