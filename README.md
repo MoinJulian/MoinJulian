@@ -17,7 +17,7 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Profile Stats
 
-![Julian Hammer's GitHub stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true&theme=dark)
+![MoinJulian's GitHub stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true&theme=dark)
 
 ## Most used languages
 
