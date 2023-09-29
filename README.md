@@ -13,15 +13,15 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Streak
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=moinjulian&theme=dark)](https://git.io/streak-stats)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=moinjulian&theme=transparent)](https://git.io/streak-stats)
 
 ## Profile Stats
 
-![MoinJulian's GitHub stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true&theme=dark&show=prs_merged,prs_merged_percentage&include_all_commits=true&rank_icon=percentile)
+![MoinJulian's GitHub stats](https://github-readme-stats.vercel.app/api?username=moinjulian&show_icons=true&theme=transparent&show=prs_merged,prs_merged_percentage&include_all_commits=true&rank_icon=percentile)
 
 ## Most used languages
 
-![image](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&layout=pie&langs_count=20&theme=dark)
+![image](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&layout=pie&langs_count=20&theme=transparent)
 
 ## Projects
 
