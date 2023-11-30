@@ -11,9 +11,9 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 **Have fun exploring my Profile or reading the Readme**
 
-## Streak
+## Total Commits
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=moinjulian&theme=dark)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=moinjulian&theme=dark&card_width=165&hide_current_streak=true&hide_longest_streak=true)](https://git.io/streak-stats)
 
 ## Profile Stats
 
