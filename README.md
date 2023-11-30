@@ -36,7 +36,7 @@ reloaded the site or accidentally closed it, to start a new game the user has to
 on the Restart Gamebutton or a team must have won, only then the data will be deleted 
 from localStorage.
 
-Here you can play the games: [Golf Games](https://golf.moinjulian.com)
+Here you can play the games: [Golf Games](https://realgolf.games)
 
 My finished projects can be found on my [website](https://moinjulian.com).
 
