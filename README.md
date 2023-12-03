@@ -27,16 +27,16 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ### My favourite Project
 
-My favorite project is my **Golf Games** SvelteKit applications. 
+My favorite project is my **Real Golf** SvelteKit applications. 
 A website with three different golf games and a user authentication with SvelteKit 
-and MongoDB. The user cansave the games in the database and copy the data from the 
-games tab and paste it onthe right game, also the games are always saved in the local 
-storage, so the user cancontinue playing from their old save game no matter if he has
+and MongoDB. The user can save the games in the database and copy the data from the 
+games tab and paste it into the right game, also the games are always saved in the local 
+storage, so the user can continue playing from their old saved game no matter if he has
 reloaded the site or accidentally closed it, to start a new game the user has to click 
-on the Restart Gamebutton or a team must have won, only then the data will be deleted 
+on the Restart Game button or a team must have won, only then the data will be deleted 
 from localStorage.
 
-Here you can play the games: [Golf Games](https://realgolf.games)
+Here you can play the games: [Real Golf](https://realgolf.games)
 
 My finished projects can be found on my [website](https://moinjulian.com).
 
