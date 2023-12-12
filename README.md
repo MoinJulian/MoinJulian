@@ -13,7 +13,7 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Stack
 
-![Static Badge](https://img.shields.io/badge/SvelteKit-orangered?style=for-the-badge&logo=svelte&labelColor=grey)![Static Badge](https://img.shields.io/badge/Typescript-blue?style=for-the-badge&logo=typescript&labelColor=grey)![Static Badge](https://img.shields.io/badge/Sass-pink?style=for-the-badge&logo=sass&labelColor=grey)![Static Badge](https://img.shields.io/badge/MongoDB-green?style=for-the-badge&logo=mongodb&labelColor=grey)![Static Badge](https://img.shields.io/badge/GitHub-lightgrey?style=for-the-badge&logo=github&labelColor=grey)
+![Static Badge](https://img.shields.io/badge/SvelteKit-orangered?style=for-the-badge&logo=svelte&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Typescript-blue?style=for-the-badge&logo=typescript&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Sass-pink?style=for-the-badge&logo=sass&labelColor=grey) ![Static Badge](https://img.shields.io/badge/MongoDB-green?style=for-the-badge&logo=mongodb&labelColor=grey) ![Static Badge](https://img.shields.io/badge/GitHub-lightgrey?style=for-the-badge&logo=github&labelColor=grey)
 
 
 ## Total Commits
