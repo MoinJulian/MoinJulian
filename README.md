@@ -32,7 +32,7 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ### My favourite Project
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=MoinJulian&repo=Golf&theme=dark)](https://github.com/moinjulian/golf)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=MoinJulian&repo=Golf&theme=dark&show_owner=true)](https://github.com/moinjulian/golf)
 
 My favorite project is my **Real Golf** SvelteKit applications. 
 A website with three different golf games and a user authentication with SvelteKit 
