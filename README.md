@@ -16,9 +16,9 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 ![Static Badge](https://img.shields.io/badge/SvelteKit-orangered?style=for-the-badge&logo=svelte&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Typescript-blue?style=for-the-badge&logo=typescript&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Sass-pink?style=for-the-badge&logo=sass&labelColor=grey) ![Static Badge](https://img.shields.io/badge/MongoDB-green?style=for-the-badge&logo=mongodb&labelColor=grey) ![Static Badge](https://img.shields.io/badge/GitHub-lightgrey?style=for-the-badge&logo=github&labelColor=grey)
 
 
-## Total Commits
+## Total Commits / Streak
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=moinjulian&theme=dark&card_width=165&hide_current_streak=true&hide_longest_streak=true)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=MoinJulian&theme=dark)](https://git.io/streak-stats)
 
 ## Profile Stats
 
