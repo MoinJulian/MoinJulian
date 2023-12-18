@@ -17,7 +17,7 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Total Commits / Streak
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=MoinJulian&mode=weekly)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=MoinJulian&theme=dark&mode=weekly)](https://git.io/streak-stats)
 
 ## Profile Stats
 
