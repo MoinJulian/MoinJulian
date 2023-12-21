@@ -31,8 +31,6 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ### My favourite Project
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=RealGolf&repo=Golf&theme=dark&show_owner=true)](https://github.com/realgolf/golf)
-
 My favorite project is my **Real Golf** SvelteKit applications. 
 A website with three different golf games and a user authentication with SvelteKit 
 and MongoDB. The user can save the games in the database and copy the data from the 
