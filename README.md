@@ -29,7 +29,7 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Wakatime
 
-![MoinJulian's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=moinjulian\&layout=compact)
+![MoinJulian's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=moinjulian\&layout=compact&theme=dark)
 
 ## Projects
 
