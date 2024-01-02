@@ -27,6 +27,10 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ![image](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&layout=pie&langs_count=20&theme=dark&exclude_repo=Golf)
 
+## Wakatime
+
+![MoinJulian's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=moinjulian\&layout=compact)
+
 ## Projects
 
 ### My favourite Project
