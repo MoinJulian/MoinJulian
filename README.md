@@ -25,7 +25,7 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Most used languages
 
-![image](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&layout=pie&langs_count=20&theme=dark&exclude_repo=Golf)
+![image](https://github-readme-stats.vercel.app/api/top-langs/?username=moinjulian&layout=compact&langs_count=20&theme=dark)
 
 ## Wakatime
 
