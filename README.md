@@ -29,6 +29,8 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Wakatime
 
+[![wakatime](https://wakatime.com/badge/user/018ccaa9-f0b8-42e9-bc4d-e8b95ef0e79a.svg)](https://wakatime.com/@018ccaa9-f0b8-42e9-bc4d-e8b95ef0e79a)
+
 ![MoinJulian's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=moinjulian\&layout=compact&theme=dark)
 
 ## Projects
