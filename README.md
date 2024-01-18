@@ -20,7 +20,7 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Trophy's
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=moinjulian)](https://github.com/ryo-ma/github-profile-trophy&row=2&column=3&theme=ondark)
+[![trophy](https://github-profile-trophy.vercel.app/?username=moinjulian&row=4&column=3&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
 
 ## Total Commits / Streak
 
