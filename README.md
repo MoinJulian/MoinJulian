@@ -14,6 +14,9 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ![Static Badge](https://img.shields.io/badge/SvelteKit-orangered?style=for-the-badge&logo=svelte&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Svelte-orangered?style=for-the-badge&logo=svelte&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Typescript-blue?style=for-the-badge&logo=typescript&labelColor=grey) ![Static Badge](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Sass-pink?style=for-the-badge&logo=sass&labelColor=grey) ![Static Badge](https://img.shields.io/badge/CSS-purple?style=for-the-badge&logo=css3&labelColor=grey) ![Static Badge](https://img.shields.io/badge/MongoDB-green?style=for-the-badge&logo=mongodb&labelColor=grey) ![Static Badge](https://img.shields.io/badge/GitHub-lightgrey?style=for-the-badge&logo=github&labelColor=grey) ![Static Badge](https://img.shields.io/badge/VSCode-blue?style=for-the-badge&logo=visualstudiocode&labelColor=grey)  ![Static Badge](https://img.shields.io/badge/Netlify-teal?style=for-the-badge&logo=netlify&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Contao-orange?style=for-the-badge&logo=contao&labelColor=grey)  ![Static Badge](https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Java-brown?style=for-the-badge&logo=openjdk&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Astro-purple?style=for-the-badge&logo=astro&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Markdown-darkblue?style=for-the-badge&logo=markdown&labelColor=grey) ![Static Badge](https://img.shields.io/badge/Vue-teal?style=for-the-badge&logo=vue.js&labelColor=grey)
 
+## Profilw Views
+
+![](https://komarev.com/ghpvc/?username=moinjulian&color=orange&style=for-the-badge)
 
 ## Total Commits / Streak
 
