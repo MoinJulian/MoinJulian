@@ -18,6 +18,10 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ![](https://komarev.com/ghpvc/?username=moinjulian&color=orange&style=for-the-badge)
 
+## Trophy's
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=moinjulian)](https://github.com/ryo-ma/github-profile-trophy&row=2&column=3&theme=ondark)
+
 ## Total Commits / Streak
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=MoinJulian&theme=dark&mode=weekly)](https://git.io/streak-stats)
