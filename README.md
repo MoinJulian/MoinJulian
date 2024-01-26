@@ -2,7 +2,7 @@
 
 ## About me
 
-Hi I'm Julian 16 years old 
+Hi I'm Julian 17 years old 
 I'm a Full Stack Web developer,  
 I'm also working as an Full Stack Developer for an Company mentioned in my Bio.
 
