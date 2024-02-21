@@ -36,10 +36,6 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ![MoinJulian's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=moinjulian&layout=compact&theme=dark)
 
-## Skyline
-
-<script src="https://embed.github.com/view/3d/MoinJulian/MoinJulian/main/IMG/MoinJulian-2023.stl"></script>
-
 ## Projects
 
 ### My favourite Project
