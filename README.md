@@ -20,7 +20,7 @@ I love to build my own SvelteKit Projects as well, you can find all of them at R
 
 ## Total Commits / Streak
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=MoinJulian&theme=dark&mode=daily)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=MoinJulian&theme=dark&mode=weekly&exclude_days=Mon)](https://git.io/streak-stats)
 
 ## Profile Stats
 
