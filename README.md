@@ -1,44 +1,34 @@
-# Hi, I'm Julian 👋
+# Hi, I'm Julian 👋  
 
-### Senior Software Engineer | CEO @realgolfgames | Passionate about clean code & over-engineered automation
-
----
-
-## About Me
-
-I'm Julian, 18 years old and a driven Senior Software Engineer with a knack for building elegant, scalable web applications. As CEO of [RealGolf.Games](https://realgolf.games), I combine my love for golf and technology to create engaging, innovative gaming experiences.
-
-When I'm not coding or managing projects, I enjoy exploring new frameworks, automating repetitive tasks (maybe a bit too much 😉), and of course playing golf.
+💻 **Senior Software Engineer** | 🎯 **CEO @RealGolf.Games** | ⚡ Passionate about clean code & automation  
 
 ---
 
-## Skills & Tech Stack
+## 🚀 About Me  
 
-### Core Expertise
-
-- **Frontend:** SvelteKit, Svelte, TypeScript, JavaScript, CSS3, Sass  
-- **Backend:** Node.js, MongoDB, REST APIs  
-- **Tools & Platforms:** GitHub, VSCode, Markdown, Render, Netlify, Supabase  
-- **Languages:** TypeScript, JavaScript, Python (basic), Java (basic)
-
-### Additional Knowledge
-
-- Vue.js, Astro, Contao CMS, Cloud Deployment, DevOps Basics
+I'm Julian, 18 y/o, I'm a **Senior Software Engineer** with over half a decade of experience, focused on building scalable and elegant web applications.  
+Founder & CEO of **RealGolf.Games UG (haftungsbeschränkt)** – combining golf and tech to create unique products.  
 
 ---
 
-## Projects
+## 🛠️ Tech Stack  
 
-### 🎯 Real Golf
-
-A full-featured web platform featuring three unique golf games with user authentication, persistent state saving (both server & localStorage), and seamless game data management.
-
-- Built with SvelteKit and MongoDB  
-- Focused on smooth UX and long-term scalability  
-- [Play Real Golf](https://realgolf.games)  
-
-Explore my other projects on my [personal website](https://moinjulian.com).
+**Frontend:** SvelteKit • Svelte • TypeScript • JavaScript • TailwindCSS • CSS3 • Sass  
+**Backend:** Node.js • MongoDB • REST APIs • Supabase • Upstash Redis  
+**Tools:** GitHub • CI/CD • Render • Netlify • VSCode  
+**Other:** Astro • Vue.js • Python (basic) • Java (basic)  
 
 ---
 
-Thanks for stopping by! 🚀
+## 📌 Projects  
+
+- **[RealGolf.Games](https://realgolf.games)** 🎯  
+  Golf platform with 3 games, rules database and trainigs planner.  
+  *Built with SvelteKit and MongoDB.*
+
+---
+
+## 📫 Get in Touch  
+
+[![Email](https://img.shields.io/badge/Email-%230077B5.svg?&style=for-the-badge&logo=gmail&logoColor=white)](mailto:jh@realgolf.games)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/moinjulian)
