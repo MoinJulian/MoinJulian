@@ -1,6 +1,6 @@
 # Hi, I'm Julian 👋  
 
-💻 **Senior Software Engineer** | 🎯 **CEO @RealGolf.Games** | ⚡ Passionate about clean code & automation  
+💻 **Senior Software Engineer** | 🎯 **CEO @swingalytica** | ⚡ Passionate about clean code & automation  
 
 ---
 
